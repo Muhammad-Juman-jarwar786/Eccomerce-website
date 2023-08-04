@@ -12,10 +12,62 @@ const FeaturedProducts = () => {
         </div>
       </div>
       <div className="mt-10 flex flex-col w-full sm:flex-wrap sm:flex-row">
-        <FeaturedProductsCard />
-        <FeaturedProductsCard />
-        <FeaturedProductsCard />
-        <FeaturedProductsCard />
+        <FeaturedProductsCard
+          img="src/assets/products/f1.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f2.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f3.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f4.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f5.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f6.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f7.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
+        <FeaturedProductsCard
+          img="src/assets/products/f8.jpg"
+          alt="product image"
+          category="adidas"
+          title="Cartoon Astronaut T-Shirt"
+          price="78"
+        />
       </div>
     </>
   );

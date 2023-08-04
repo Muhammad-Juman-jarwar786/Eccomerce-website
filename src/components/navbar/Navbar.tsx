@@ -1,19 +1,26 @@
-import { faCartShopping, faCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faCartShopping,
+  faCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MenuItems from '../menuitems/MenuItems';
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="flex flex-row bg-slate-50 w-full h-24 justify-between drop-shadow-xl">
+      <nav className="overflow-hidden flex flex-row bg-slate-50 w-full h-24 justify-between drop-shadow-xl">
         <div className="justify-center align-middle">
           <img
-            className="w-[8rem] cursor-pointer hover:translate-x-3 ease-in-out duration-200"
+            className="w-40 md:w-fit cursor-pointer hover:translate-x-3 ease-in-out duration-200"
             src="src/assets/logo.png"
             alt="Logo"
           />
         </div>
-        <div className="flex text-2xl font-semibold items-center justify-center">
+        <div className="text-4xl flex items-center justify-center w-full md:hidden cursor-pointer">
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <div className="text-2xl md:flex hidden font-semibold items-center justify-center">
           <ul className="flex flex-row gap-10 mr-[10vw]">
             <MenuItems title="Home" to="/" pathname="/" pathnamestarts="/" />
             <MenuItems
@@ -40,7 +47,7 @@ const Navbar = () => {
               pathname="/contact"
               pathnamestarts="/contact"
             />
-            <li className=" relative cursor-pointer">
+            <li className="relative cursor-pointer">
               <FontAwesomeIcon
                 className="text-[1.9rem]"
                 icon={faCartShopping}

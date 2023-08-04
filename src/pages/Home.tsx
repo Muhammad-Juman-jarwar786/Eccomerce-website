@@ -1,3 +1,4 @@
+import Banner from '../components/banner/Banner';
 import FeaturedProducts from '../components/featuredProducts/FeaturedProducts';
 import Features from '../components/features/Features';
 import HeroSection from '../components/heroSection/HeroSection';
@@ -12,6 +13,7 @@ const Home = () => {
         <HeroSection />
         <Features />
         <FeaturedProducts />
+        <Banner />
       </div>
     </>
   );
