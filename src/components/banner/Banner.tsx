@@ -8,6 +8,8 @@ const Banner = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '60px',
+    marginBottom: '40px',
   };
 
   return (

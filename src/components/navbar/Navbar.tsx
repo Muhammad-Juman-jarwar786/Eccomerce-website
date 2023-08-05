@@ -1,25 +1,76 @@
+import { useState } from 'react';
 import {
   faBars,
+  faTimes,
   faCartShopping,
-  faCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MenuItems from '../menuitems/MenuItems';
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div>
-      <nav className="overflow-hidden flex flex-row bg-slate-50 w-full h-24 justify-between drop-shadow-xl">
-        <div className="justify-center align-middle">
-          <img
-            className="w-40 md:w-fit cursor-pointer hover:translate-x-3 ease-in-out duration-200"
-            src="src/assets/logo.png"
-            alt="Logo"
-          />
+      <nav className="fixed z-10 overflow-hidden md:flex md:justify-between bg-slate-50 w-full h-auto drop-shadow-xl">
+        <div className="flex justify-between">
+          <div className="w-40">
+            <img
+              className="w-40 cursor-pointer hover:translate-x-3 ease-in-out duration-200"
+              src="src/assets/logo.png"
+              alt="Logo"
+            />
+          </div>
+          <div
+            onClick={toggleMenu}
+            className="text-4xl flex mt-12 w-40 text-center justify-center cursor-pointer hover:translate-y-3 ease-in-out duration-200 md:hidden"
+          >
+            {showMenu ? (
+              <FontAwesomeIcon icon={faTimes} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
+          </div>
         </div>
-        <div className="text-4xl flex items-center justify-center w-full md:hidden cursor-pointer">
-          <FontAwesomeIcon icon={faBars} />
+        <div className={`mt-20 ${showMenu ? 'block' : 'hidden'}`}>
+          <ul className="font-bold text-2xl text-center flex flex-col gap-10">
+            <MenuItems title="Home" to="/" pathname="/" pathnamestarts="/" />
+            <hr className="text-slate-800" />
+            <MenuItems
+              title="Shop"
+              to="/shop"
+              pathname="/shop"
+              pathnamestarts="/shop"
+            />
+            <hr className="text-slate-800" />
+            <MenuItems
+              title="Blog"
+              to="/blog"
+              pathname="/blog"
+              pathnamestarts="/blog"
+            />
+            <hr className="text-slate-800" />
+            <MenuItems
+              title="About"
+              to="/about"
+              pathname="/about"
+              pathnamestarts="/about"
+            />
+            <hr className="text-slate-800" />
+            <MenuItems
+              title="Contact"
+              to="/contact"
+              pathname="/contact"
+              pathnamestarts="/contact"
+            />
+            <hr className="text-slate-800" />
+          </ul>
         </div>
+
         <div className="text-2xl md:flex hidden font-semibold items-center justify-center">
           <ul className="flex flex-row gap-10 mr-[10vw]">
             <MenuItems title="Home" to="/" pathname="/" pathnamestarts="/" />

@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <div className="bg-slate-200 flex flex-col-reverse md:flex-row w-full drop-shadow-xl">
+    <div className="bg-slate-200 flex flex-col-reverse md:flex-row pt-28 w-full drop-shadow-xl">
       <div className="flex flex-col w-full md:w-1/2 p-8 md:p-32 mt-8 md:mt-32">
         <h3 className="text-slate-800 text-xl md:text-2xl mb-4 tracking-widest">
           Trade-In-Offer

@@ -1,11 +1,11 @@
-import FeaturedProductsCard from './FeaturedProductsCard';
+import FeaturedProductsCard from '../featuredProducts/FeaturedProductsCard';
 
-const FeaturedProducts = () => {
+const NewArrival = () => {
   return (
     <>
-      <div className="md:ml-10 md:mr-10 items-center justify-center text-center mt-20">
+      <div className="items-center justify-center text-center mt-20">
         <div className="text-4xl font-bold text-black tracking-widest">
-          Featured Products
+          New Arrivals
         </div>
         <div className="text-md text-slate-400 mt-4">
           Summer Collection New Modern Design
@@ -13,56 +13,56 @@ const FeaturedProducts = () => {
       </div>
       <div className="mt-10 flex flex-col w-full sm:flex-wrap sm:flex-row">
         <FeaturedProductsCard
-          img="src/assets/products/f1.jpg"
+          img="src/assets/products/n1.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f2.jpg"
+          img="src/assets/products/n2.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f3.jpg"
+          img="src/assets/products/n3.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f4.jpg"
+          img="src/assets/products/n4.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f5.jpg"
+          img="src/assets/products/n5.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f6.jpg"
+          img="src/assets/products/n6.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f7.jpg"
+          img="src/assets/products/n7.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
           price="78"
         />
         <FeaturedProductsCard
-          img="src/assets/products/f8.jpg"
+          img="src/assets/products/n8.jpg"
           alt="product image"
           category="adidas"
           title="Cartoon Astronaut T-Shirt"
@@ -73,4 +73,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default NewArrival;
