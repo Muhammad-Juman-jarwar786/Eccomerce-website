@@ -138,6 +138,7 @@ const ProductSection = () => {
         {Data.map((item) => (
           <FeaturedProductsCard
             key={item.id}
+            link="/singleproduct"
             img={item.img}
             alt={item.alt}
             category={item.category}

@@ -138,6 +138,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="text-center text-slate-400 sm:hidden xl:block">
+        &#9426; Muhammad Juman, React Ecommerce Website
+      </div>
     </div>
   );
 };

@@ -1,12 +1,15 @@
 import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const FeaturedProductsCard = (props: any) => {
   return (
     <>
       <div className="bg-white w-full flex flex-col  border-2 rounded-3xl mt-9 p-3 sm:w-1/2 md:w-1/3 lg:w-1/4 shadow-lg justify-">
         <div className="w-full h-auto">
-          <img className="rounded-3xl" src={props.img} alt={props.alt} />
+          <Link to={props?.link}>
+            <img className="rounded-3xl" src={props.img} alt={props.alt} />
+          </Link>
         </div>
         <div>
           <p className="text-slate-400 text-xl sm:text-lg">{props.category}</p>
