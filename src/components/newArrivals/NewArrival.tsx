@@ -1,6 +1,9 @@
-import FeaturedProductsCard from "../featuredProducts/FeaturedProductsCard";
+import FeaturedProductsCard from '../featuredProducts/FeaturedProductsCard';
+import { ProductsData } from '../../data/ProductsData';
 
 const NewArrival = () => {
+  const productsToShow = 8;
+
   return (
     <>
       <div className="ml-10 mr-10">
@@ -13,7 +16,19 @@ const NewArrival = () => {
           </div>
         </div>
         <div className="mt-10 flex flex-col w-full sm:flex-wrap sm:flex-row">
-          <FeaturedProductsCard
+          {ProductsData.slice(ProductsData.length - productsToShow).map(
+            (products) => (
+              <FeaturedProductsCard
+                key={products.id}
+                img={products.img}
+                alt={products.alt}
+                category={products.category}
+                title={products.title}
+                price={products.price}
+              />
+            )
+          )}
+          {/* <FeaturedProductsCard
             img="src/assets/products/n1.jpg"
             alt="product image"
             category="adidas"
@@ -68,7 +83,7 @@ const NewArrival = () => {
             category="adidas"
             title="Cartoon Astronaut T-Shirt"
             price="78"
-          />
+          /> */}
         </div>
       </div>
     </>

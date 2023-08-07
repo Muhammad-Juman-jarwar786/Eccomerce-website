@@ -1,12 +1,12 @@
-import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const FeaturedProductsCard = (props: any) => {
   return (
     <>
-      <div className="bg-white w-full flex flex-col  border-2 rounded-3xl mt-9 p-3 sm:w-1/2 md:w-1/3 lg:w-1/4 shadow-lg justify-">
-        <div className="w-full h-auto">
+      <div className=" bg-white w-full flex flex-col  border-2 rounded-3xl mt-9 p-3 sm:w-1/2 md:w-1/3 lg:w-1/4 shadow-lg justify-">
+        <div className="w-full h-auto ">
           <Link to={props?.link}>
             <img className="rounded-3xl" src={props.img} alt={props.alt} />
           </Link>
@@ -18,11 +18,11 @@ const FeaturedProductsCard = (props: any) => {
           </h1>
           <div>
             <div className="text-md sm:text-sm">
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
             </div>
             <div className="flex justify-between text-2xl sm:text-xl">
               <div className="text-teal-700 font-medium mt-2">

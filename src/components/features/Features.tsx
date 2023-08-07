@@ -1,9 +1,20 @@
 import FeatureCard from './FeatureCard';
+import { FeaturesData } from '../../data/FeaturesData';
 
 const Features = () => {
   return (
     <div className="flex flex-wrap justify-center mt-20">
-      <FeatureCard
+      {FeaturesData.map((feature) => (
+        <FeatureCard
+          key={feature.id}
+          img={feature.img}
+          title={feature.title}
+          bgcolor={feature.bgcolor}
+          txtcolor={feature.txtcolor}
+          alt={feature.alt}
+        />
+      ))}
+      {/* <FeatureCard
         img="src/assets/features/f1.png"
         title="Free Shipping"
         bgcolor="bg-yellow-200"
@@ -44,7 +55,7 @@ const Features = () => {
         bgcolor="bg-orange-200"
         txtcolor="text-emerald-600"
         alt="24/7 support"
-      />
+      /> */}
     </div>
   );
 };

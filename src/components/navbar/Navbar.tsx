@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed z-10 overflow-hidden md:flex md:justify-between bg-slate-50 w-full h-auto drop-shadow-xl">
+      <nav className="fixed z-50 overflow-hidden md:flex md:justify-between bg-slate-50 w-full h-auto drop-shadow-xl">
         <div className="flex justify-between">
           <div className="w-40">
             <img

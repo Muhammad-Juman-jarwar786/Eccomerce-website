@@ -1,12 +1,12 @@
-import FeaturedProductsCard from './FeaturedProductsCard';
+import FeaturedProductsCard from '../featuredProducts/FeaturedProductsCard';
 import { ProductsData } from '../../data/ProductsData';
 
-const FeaturedProducts = () => {
-  const productsToShow: number = 8;
+const FeaturedProductsShop = () => {
+  const productsToShow: number = 4;
 
   return (
     <>
-      <div className="ml-10 mr-10">
+      <div className="ml-10 mr-10 mb-20">
         <div className="md:ml-10 md:mr-10 items-center justify-center text-center mt-20">
           <div className="text-4xl font-bold text-black tracking-widest">
             Featured Products
@@ -32,4 +32,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default FeaturedProductsShop;
