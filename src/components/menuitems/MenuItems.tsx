@@ -6,7 +6,7 @@ const MenuItems = (props: any) => {
 
   return (
     <NavLink to={props.to} className="relative cursor-pointer group MenuItems">
-      <li className="relative">
+      <li onClick={props?.closeMenuHandler} className="relative">
         {props.title}
         <span
           className={`absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-500 ease-in-out underline 

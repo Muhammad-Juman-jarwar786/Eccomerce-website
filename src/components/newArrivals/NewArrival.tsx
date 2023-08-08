@@ -15,7 +15,7 @@ const NewArrival = () => {
             Summer Collection New Modern Design
           </div>
         </div>
-        <div className="mt-10 flex flex-col w-full sm:flex-wrap sm:flex-row">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-2 md:gap-3 lg:gap-4 mx-auto">
           {ProductsData.slice(ProductsData.length - productsToShow).map(
             (products) => (
               <FeaturedProductsCard

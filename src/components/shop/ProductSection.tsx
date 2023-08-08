@@ -5,7 +5,7 @@ import { ProductsData } from '../../data/ProductsData';
 const ProductSection = () => {
   return (
     <div className="ml-10 mr-10 mb-20">
-      <div className=" mt-10 flex flex-col w-full sm:flex-wrap sm:flex-row">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-2 md:gap-3 lg:gap-4 mx-auto">
         {ProductsData.map((item) => (
           <FeaturedProductsCard
             key={item.id}
