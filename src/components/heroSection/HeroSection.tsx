@@ -1,7 +1,14 @@
 const HeroSection = () => {
   return (
     <div className="bg-slate-200 flex flex-col-reverse md:flex-row pt-28 w-full drop-shadow-xl">
-      <div className="flex flex-col w-full md:w-1/2 p-8 md:p-32 mt-8 md:mt-32">
+      <div
+        data-aos="fade-right"
+        data-aos-easing="ease-in-back"
+        // data-aos-delay="2000"
+        data-aos-duration="1000"
+        data-aos-offset="0"
+        className="flex flex-col w-full md:w-1/2 p-8 md:p-32 mt-8 md:mt-32"
+      >
         <h3 className="text-slate-800 text-xl md:text-2xl mb-4 tracking-widest">
           Trade-In-Offer
         </h3>
@@ -28,6 +35,11 @@ const HeroSection = () => {
 
       <div className="w-full md:w-1/2">
         <img
+          data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          // data-aos-delay="2000"
+          data-aos-duration="1000"
+          data-aos-offset="0"
           className="w-full h-[90vh] object-contain ml-[-5vw] md:ml-0"
           src="src/assets/herosection.png"
           alt="Model"
