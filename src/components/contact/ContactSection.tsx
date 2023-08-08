@@ -1,7 +1,7 @@
 const ContactSection = () => {
   return (
     <>
-      <div className=" md:grid md:grid-cols-2 mt-10 lg:mt-20 mx-5 lg:mx-20">
+      <div className="overflow-hidden md:grid md:grid-cols-2 mt-10 lg:mt-20 mx-5 lg:mx-20">
         <div className="text-center md:text-left tracking-wider font-bold lg:mt-0">
           <div className="text-slate-700  text-lg md:text-xl lg:text-2xl ">
             GET IN TOUCH
@@ -17,25 +17,25 @@ const ContactSection = () => {
             <div className="lg:flex lg:flex-row lg:gap-x-10">
               <span className="text-gray-700">
                 <i className="fa-regular fa-map"></i>
-              </span>{' '}
+              </span>{" "}
               56 Glassford Street Glasgow GI IUL New York
             </div>
             <div className="lg:flex lg:flex-row lg:gap-x-10">
               <span className="text-gray-700">
                 <i className="fa-regular fa-envelope"></i>
-              </span>{' '}
+              </span>{" "}
               contact@example.com
             </div>
             <div className="lg:flex lg:flex-row lg:gap-x-10">
               <span className="text-gray-700">
                 <i className="fa-solid fa-phone"></i>
-              </span>{' '}
+              </span>{" "}
               0315010498
             </div>
             <div className="lg:flex lg:flex-row lg:gap-x-10">
               <span className="text-gray-700">
                 <i className="fa-regular fa-clock"></i>
-              </span>{' '}
+              </span>{" "}
               Monday to Saturday, 10:00 - 18:00
             </div>
           </div>
