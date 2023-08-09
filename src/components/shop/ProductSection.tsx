@@ -1,4 +1,4 @@
-import FeaturedProductsCard from '../featuredProducts/FeaturedProductsCard';
+import FeaturedProductsCard from '../productCard/FeaturedProductsCard';
 
 import { ProductsData } from '../../data/ProductsData';
 
@@ -15,6 +15,7 @@ const ProductSection = () => {
             category={item.category}
             title={item.title}
             price={item.price}
+            animation={item.animation}
           />
         ))}
       </div>

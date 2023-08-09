@@ -5,9 +5,14 @@ import NewsLetter from '../components/newsLetter/NewsLetter';
 const Blog = () => {
   return (
     <>
-      <BlogHeroSection />
-      <BlogShowCase />
-      <NewsLetter />
+      <div
+        style={{ fontFamily: 'Roboto Slab', fontWeight: 400 }}
+        className="bg-slate-100 w-full h-auto"
+      >
+        <BlogHeroSection />
+        <BlogShowCase />
+        <NewsLetter />
+      </div>
     </>
   );
 };

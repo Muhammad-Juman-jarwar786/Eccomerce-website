@@ -22,7 +22,7 @@ const Banner = () => {
           Accessories
         </div>
         <div className="">
-          <button className="text-black bg-white p-2 rounded-md mt-3 text-lg md:text-xl">
+          <button className="text-black p-2 rounded-md mt-3 text-lg md:text-xl   ">
             Explore More
           </button>
         </div>

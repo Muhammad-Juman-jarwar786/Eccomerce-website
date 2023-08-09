@@ -1,5 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom";
-import "./MenuItem.css";
+import { NavLink, useLocation } from 'react-router-dom';
+import './MenuItem.css';
 
 const MenuItems = (props: any) => {
   const location = useLocation();
@@ -11,6 +11,7 @@ const MenuItems = (props: any) => {
         data-aos-easing="ease-in-back"
         data-aos-delay="2000"
         data-aos-duration="1000"
+        data-aos-once="true"
         data-aos-offset="0"
         onClick={props?.closeMenuHandler}
         className="relative"
@@ -21,8 +22,8 @@ const MenuItems = (props: any) => {
           ${
             location.pathname === `${props.to}` ||
             location.pathname.startsWith(`${props.pathnamestarts}?`)
-              ? "w-full"
-              : "w-0"
+              ? 'w-full'
+              : 'w-0'
           }`}
         ></span>
       </li>

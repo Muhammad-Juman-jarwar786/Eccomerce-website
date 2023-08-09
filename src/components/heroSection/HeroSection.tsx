@@ -1,10 +1,9 @@
 const HeroSection = () => {
   return (
-    <div className="bg-slate-200 flex flex-col-reverse md:flex-row pt-28 w-full drop-shadow-xl">
+    <div className=" bg-slate-200 flex flex-col-reverse md:flex-row pt-28 w-full drop-shadow-xl">
       <div
         data-aos="fade-right"
         data-aos-easing="ease-in-back"
-        // data-aos-delay="2000"
         data-aos-duration="1000"
         data-aos-offset="0"
         className="flex flex-col w-full md:w-1/2 p-8 md:p-32 mt-8 md:mt-32"
@@ -20,7 +19,7 @@ const HeroSection = () => {
           Save More With coupons & up to 70% Off!
         </p>
         <div className="mt-8">
-          <button className="relative w-60 h-12 rounded-md bg-transparent">
+          <button className="relative w-60 h-12 rounded-md bg-transparent hover:scale-110 transition-all duration-500">
             <img
               className="absolute inset-0 w-full h-full object-cover opacity-60"
               src="src/assets/button-background.png"
@@ -33,11 +32,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2">
+      <div className="overflow-hidden w-full md:w-1/2">
         <img
           data-aos="fade-left"
           data-aos-easing="ease-in-back"
-          // data-aos-delay="2000"
           data-aos-duration="1000"
           data-aos-offset="0"
           className="w-full h-[90vh] object-contain ml-[-5vw] md:ml-0"

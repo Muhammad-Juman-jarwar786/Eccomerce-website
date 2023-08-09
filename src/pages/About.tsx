@@ -7,12 +7,17 @@ import NewsLetter from '../components/newsLetter/NewsLetter';
 const About = () => {
   return (
     <>
-      <AboutHeroSection />
-      <AboutSection />
-      <AboutVideo />
-      <Features />
-      <br />
-      <NewsLetter />
+      <div
+        style={{ fontFamily: 'Roboto Slab', fontWeight: 400 }}
+        className="bg-slate-100 w-full h-auto"
+      >
+        <AboutHeroSection />
+        <AboutSection />
+        <AboutVideo />
+        <Features />
+        <br />
+        <NewsLetter />
+      </div>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <div
         style={{ fontFamily: 'Roboto Slab', fontWeight: 400 }}
-        className="bg-slate-50 w-full h-auto"
+        className="bg-slate-100 w-full h-auto overflow-hidden"
       >
         <HeroSection />
         <Features />

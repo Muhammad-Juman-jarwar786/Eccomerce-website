@@ -6,6 +6,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-left',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-left',
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-left',
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-left',
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-right',
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-right',
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-right',
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-right',
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-up',
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-up',
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-up',
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-up',
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-down',
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-down',
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-down',
   },
   {
     id: 16,
@@ -126,5 +141,6 @@ export const ProductsData = [
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
     price: '78',
+    animation: 'flip-down',
   },
 ];

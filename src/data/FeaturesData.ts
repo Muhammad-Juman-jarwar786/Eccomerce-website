@@ -6,6 +6,7 @@ export const FeaturesData = [
     title: 'Free Shipping',
     bgcolor: 'bg-yellow-200',
     txtcolor: 'text-emerald-600',
+    animation: 'fade-right',
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const FeaturesData = [
     title: 'Online Order',
     bgcolor: 'bg-green-200',
     txtcolor: 'text-emerald-600',
+    animation: 'zoom-in',
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const FeaturesData = [
     title: 'Save Money',
     bgcolor: 'bg-blue-200',
     txtcolor: 'text-emerald-600',
+    animation: 'fade-up',
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const FeaturesData = [
     title: 'Promotions',
     bgcolor: 'bg-indigo-200',
     txtcolor: 'text-emerald-600',
+    animation: 'fade-down',
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const FeaturesData = [
     title: 'Happy Sell',
     bgcolor: 'bg-pink-200',
     txtcolor: 'text-emerald-600',
+    animation: 'zoom-out',
   },
   {
     id: 6,
@@ -46,5 +51,6 @@ export const FeaturesData = [
     title: '24/7 support',
     bgcolor: 'bg-orange-200',
     txtcolor: 'text-emerald-600',
+    animation: 'fade-left',
   },
 ];

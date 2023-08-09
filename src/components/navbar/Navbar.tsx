@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
-import anime from "animejs";
-import { useState } from "react";
+import React, { useEffect, useRef } from 'react';
+import anime from 'animejs';
+import { useState } from 'react';
 import {
   faBars,
   faTimes,
   faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import MenuItems from "../menuitems/MenuItems";
-import { NavLink } from "react-router-dom";
-import { MenuData } from "../../data/MenuData";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MenuItems from '../menuitems/MenuItems';
+import { NavLink } from 'react-router-dom';
+import { MenuData } from '../../data/MenuData';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -24,24 +24,24 @@ const Navbar = () => {
     if (showMenu && menuRef.current) {
       const divElement = menuRef.current;
 
-      divElement.style.opacity = "0";
+      divElement.style.opacity = '0';
 
       anime({
         targets: divElement,
-        opacity: "1",
+        opacity: '1',
         duration: 3000,
-        easing: "easeInOutQuad",
-        direction: "normal",
+        easing: 'easeInOutQuad',
+        direction: 'normal',
       });
     } else if (!showMenu && menuRef.current) {
       const divElement = menuRef.current;
-      divElement.style.opacity = "1";
+      divElement.style.opacity = '1';
       anime({
         targets: divElement,
-        opacity: "0",
+        opacity: '0',
         duration: 1000,
-        easing: "easeInOutQuad",
-        direction: "normal",
+        easing: 'easeInOutQuad',
+        direction: 'normal',
       });
     }
   }, [toggleMenu]);
@@ -50,14 +50,14 @@ const Navbar = () => {
     setShowMenu(false);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
   const logoRef = useRef<HTMLDivElement | null>(null);
@@ -66,25 +66,25 @@ const Navbar = () => {
     if (showMenu && logoRef.current) {
       const element = logoRef.current;
 
-      element.style.height = "11%";
+      element.style.height = '11%';
 
       anime({
         targets: element,
-        height: "70%",
+        height: '70%',
         duration: 2000,
-        easing: "easeInOutQuad",
-        direction: "normal",
+        easing: 'easeInOutQuad',
+        direction: 'normal',
       });
     } else if (!showMenu && logoRef.current) {
       const element = logoRef.current;
 
-      element.style.height = "70%";
+      element.style.height = '70%';
 
       anime({
         targets: element,
-        height: "11%",
+        height: '11%',
         duration: 2000,
-        easing: "easeInOutQuad",
+        easing: 'easeInOutQuad',
       });
     }
   }, [toggleMenu]);
@@ -93,22 +93,22 @@ const Navbar = () => {
     if (logoRef.current) {
       const element = logoRef.current;
 
-      element.style.width = "0";
-      element.style.height = "11%";
+      element.style.width = '0';
+      element.style.height = '11%';
 
       anime({
         targets: element,
-        width: "100%",
-        height: "11%",
+        width: '100%',
+        height: '11%',
         duration: 2000,
-        easing: "easeInOutQuad",
-        direction: "normal",
+        easing: 'easeInOutQuad',
+        direction: 'normal',
       });
     }
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <nav
         ref={logoRef}
         className="NavBar fixed z-50 overflow-hidden md:flex md:justify-between bg-slate-100 w-full h-auto drop-shadow-xl"
@@ -119,6 +119,7 @@ const Navbar = () => {
             data-aos-easing="ease-in-back"
             data-aos-delay="2000"
             data-aos-duration="1000"
+            data-aos-once="true"
             data-aos-offset="0"
             className="LOGO w-40"
           >
@@ -134,11 +135,12 @@ const Navbar = () => {
             data-aos-easing="ease-in-back"
             data-aos-delay="2000"
             data-aos-duration="1000"
+            data-aos-once="true"
             data-aos-offset="0"
             className="md:hidden mt-8 relative cursor-pointer justify-center items-center flex"
           >
             <FontAwesomeIcon
-              className="text-[1.9rem] relative"
+              className="hover:scale-110 ease-in-out transition-all duration-500 text-[1.9rem] relative"
               icon={faCartShopping}
             />
             <span className="absolute left-3 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
@@ -151,17 +153,24 @@ const Navbar = () => {
             data-aos-easing="ease-in-back"
             data-aos-delay="2000"
             data-aos-duration="1000"
+            data-aos-once="true"
             data-aos-offset="0"
-            className="text-4xl flex mt-12 w-40 text-center justify-center cursor-pointer hover:translate-y-3 ease-in-out duration-200 md:hidden"
+            className=" text-4xl flex mt-12 w-40 text-center justify-center cursor-pointer md:hidden"
           >
             {showMenu ? (
-              <FontAwesomeIcon icon={faTimes} />
+              <FontAwesomeIcon
+                className="hover:scale-110 ease-in-out transition-all duration-500"
+                icon={faTimes}
+              />
             ) : (
-              <FontAwesomeIcon icon={faBars} />
+              <FontAwesomeIcon
+                className="hover:scale-110 ease-in-out transition-all duration-500"
+                icon={faBars}
+              />
             )}
           </div>
         </div>
-        <div ref={menuRef} className={`mt-20 ${showMenu ? "block" : ""}`}>
+        <div ref={menuRef} className={`mt-20 ${showMenu ? 'block' : ''}`}>
           <ul className="h-full font-bold text-2xl text-center flex flex-col gap-7">
             {MenuData.map((item, i) => (
               <React.Fragment key={i}>
@@ -197,15 +206,16 @@ const Navbar = () => {
               data-aos-easing="ease-in-back"
               data-aos-delay="2000"
               data-aos-duration="1000"
+              data-aos-once="true"
               data-aos-offset="0"
-              className="relative cursor-pointer"
+              className="relative cursor-pointer group"
             >
               <FontAwesomeIcon
-                className="text-[1.9rem]"
+                className="text-[1.9rem] hover:scale-110 ease-in-out transition-all duration-500"
                 icon={faCartShopping}
               />
-              <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
-                {1}
+              <span className="group-hover:scale-110 ease-in-out transition-all duration-500 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+                {12}
               </span>
             </NavLink>
           </ul>

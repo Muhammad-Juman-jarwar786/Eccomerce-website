@@ -1,4 +1,4 @@
-import FeaturedProductsCard from '../featuredProducts/FeaturedProductsCard';
+import FeaturedProductsCard from '../productCard/FeaturedProductsCard';
 import { ProductsData } from '../../data/ProductsData';
 
 const FeaturedProductsShop = () => {
@@ -36,6 +36,7 @@ const FeaturedProductsShop = () => {
               category={product.category}
               title={product.title}
               price={product.price}
+              animation={product.animation}
             />
           ))}
         </div>
