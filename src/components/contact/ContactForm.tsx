@@ -1,6 +1,10 @@
 import { useFormik } from 'formik';
 import { ContactFormValidation } from '../../validation/ContactFormValidation';
 
+import people1 from '../../assets/people/1.png';
+import people2 from '../../assets/people/2.png';
+import people3 from '../../assets/people/3.png';
+
 interface FormValues {
   name: string;
   email: string;
@@ -129,7 +133,7 @@ const ContactForm = () => {
           <div className="lg:flex lg:flex-col lg:justify-items-end">
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full  "
-              src="src/assets/people/1.png"
+              src={people1}
               alt=""
             />
           </div>
@@ -152,7 +156,7 @@ const ContactForm = () => {
           <div>
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full"
-              src="src/assets/people/2.png"
+              src={people2}
               alt=""
             />
           </div>
@@ -175,7 +179,7 @@ const ContactForm = () => {
           <div>
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full"
-              src="src/assets/people/3.png"
+              src={people3}
               alt=""
             />
           </div>

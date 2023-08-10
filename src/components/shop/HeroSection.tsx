@@ -1,8 +1,9 @@
 import HeroBanner from '../banner/HeroBanner';
+import b1 from '../../assets/banner/b1.jpg';
 
 const HeroSection = () => {
   const bannerStyle = {
-    backgroundImage: "url('src/assets/banner/b1.jpg')",
+    backgroundImage: `url(${b1})`,
   };
 
   return (

@@ -1,8 +1,10 @@
+import a6 from '../../assets/about/a6.jpg';
+
 const AboutSection = () => {
   return (
     <div className="mt-20 ml-10 mr-10 lg:grid lg:grid-cols-2 lg:gap-10">
       <div className="">
-        <img src="src/assets/about/a6.jpg" alt="" />
+        <img src={a6} alt="" />
       </div>
       <div className="mt-10 lg:mt-20 tracking-wider h-fit ">
         <div className="text-2xl md:text-3xl  font-bold text-center lg:text-left">

@@ -1,7 +1,25 @@
+import f1 from '../assets/products/f1.jpg';
+import f2 from '../assets/products/f2.jpg';
+import f3 from '../assets/products/f3.jpg';
+import f4 from '../assets/products/f4.jpg';
+import f5 from '../assets/products/f5.jpg';
+import f6 from '../assets/products/f6.jpg';
+import f7 from '../assets/products/f7.jpg';
+import f8 from '../assets/products/f8.jpg';
+
+import n1 from '../assets/products/n1.jpg';
+import n2 from '../assets/products/n2.jpg';
+import n3 from '../assets/products/n3.jpg';
+import n4 from '../assets/products/n4.jpg';
+import n5 from '../assets/products/n5.jpg';
+import n6 from '../assets/products/n6.jpg';
+import n7 from '../assets/products/n7.jpg';
+import n8 from '../assets/products/n8.jpg';
+
 export const ProductsData = [
   {
     id: 1,
-    img: 'src/assets/products/f1.jpg',
+    img: f1,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -10,7 +28,7 @@ export const ProductsData = [
   },
   {
     id: 2,
-    img: 'src/assets/products/f2.jpg',
+    img: f2,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -19,7 +37,7 @@ export const ProductsData = [
   },
   {
     id: 3,
-    img: 'src/assets/products/f3.jpg',
+    img: f3,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -28,7 +46,7 @@ export const ProductsData = [
   },
   {
     id: 4,
-    img: 'src/assets/products/f4.jpg',
+    img: f4,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -37,7 +55,7 @@ export const ProductsData = [
   },
   {
     id: 5,
-    img: 'src/assets/products/f5.jpg',
+    img: f5,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -46,7 +64,7 @@ export const ProductsData = [
   },
   {
     id: 6,
-    img: 'src/assets/products/f6.jpg',
+    img: f6,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -55,7 +73,7 @@ export const ProductsData = [
   },
   {
     id: 7,
-    img: 'src/assets/products/f7.jpg',
+    img: f7,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -64,7 +82,7 @@ export const ProductsData = [
   },
   {
     id: 8,
-    img: 'src/assets/products/f8.jpg',
+    img: f8,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -73,7 +91,7 @@ export const ProductsData = [
   },
   {
     id: 9,
-    img: 'src/assets/products/n1.jpg',
+    img: n1,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -82,7 +100,7 @@ export const ProductsData = [
   },
   {
     id: 10,
-    img: 'src/assets/products/n2.jpg',
+    img: n2,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -91,7 +109,7 @@ export const ProductsData = [
   },
   {
     id: 11,
-    img: 'src/assets/products/n3.jpg',
+    img: n3,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -100,7 +118,7 @@ export const ProductsData = [
   },
   {
     id: 12,
-    img: 'src/assets/products/n4.jpg',
+    img: n4,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -109,7 +127,7 @@ export const ProductsData = [
   },
   {
     id: 13,
-    img: 'src/assets/products/n5.jpg',
+    img: n5,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -118,7 +136,7 @@ export const ProductsData = [
   },
   {
     id: 14,
-    img: 'src/assets/products/n6.jpg',
+    img: n6,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -127,7 +145,7 @@ export const ProductsData = [
   },
   {
     id: 15,
-    img: 'src/assets/products/n7.jpg',
+    img: n7,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',
@@ -136,7 +154,7 @@ export const ProductsData = [
   },
   {
     id: 16,
-    img: 'src/assets/products/n8.jpg',
+    img: n8,
     alt: 'product image',
     category: 'adidas',
     title: 'Cartoon Astronaut T-Shirt',

@@ -40,62 +40,6 @@ const NewArrival = () => {
               />
             )
           )}
-          {/* <FeaturedProductsCard
-            img="src/assets/products/n1.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n2.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n3.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n4.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n5.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n6.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n7.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          />
-          <FeaturedProductsCard
-            img="src/assets/products/n8.jpg"
-            alt="product image"
-            category="adidas"
-            title="Cartoon Astronaut T-Shirt"
-            price="78"
-          /> */}
         </div>
       </div>
     </>

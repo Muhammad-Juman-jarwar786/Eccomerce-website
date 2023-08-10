@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import f1 from '../../assets/products/f1.jpg';
 
 const CartProduct = () => {
   const [initialVal, setInitialVal] = useState(1);
@@ -8,7 +9,7 @@ const CartProduct = () => {
       <td className="w-14 lg:w-20">
         <img
           className="transition-all duration-700 hover:scale-150 cursor-pointer object-cover hover:shadow-md hover:border-4 hover:border-white"
-          src="src/assets/products/f1.jpg"
+          src={f1}
           alt="product"
         />
       </td>

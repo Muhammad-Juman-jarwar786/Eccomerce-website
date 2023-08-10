@@ -1,11 +1,14 @@
 import '../../animation/Button.css';
 
+import b17 from '../../assets/banner/b17.jpg';
+import b10 from '../../assets/banner/b10.jpg';
+
 const BannerShowCase = () => {
   const bannerStyles: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b17.jpg')",
+    backgroundImage: `url(${b17})`,
   };
   const bannerStyles2: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b10.jpg')",
+    backgroundImage: `url(${b10})`,
   };
 
   return (

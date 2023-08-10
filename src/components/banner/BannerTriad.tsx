@@ -1,12 +1,16 @@
+import b7 from '../../assets/banner/b7.jpg';
+import b4 from '../../assets/banner/b4.jpg';
+import b18 from '../../assets/banner/b18.jpg';
+
 const BannerTriad = () => {
   const bannerStyles: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b7.jpg')",
+    backgroundImage: `url(${b7})`,
   };
   const bannerStyles2: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b4.jpg')",
+    backgroundImage: `url(${b4})`,
   };
   const bannerStyles3: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b18.jpg')",
+    backgroundImage: `url(${b18})`,
   };
 
   return (

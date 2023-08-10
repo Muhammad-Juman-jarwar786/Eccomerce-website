@@ -1,7 +1,14 @@
+import f1 from '../assets/features/f1.png';
+import f2 from '../assets/features/f2.png';
+import f3 from '../assets/features/f3.png';
+import f4 from '../assets/features/f4.png';
+import f5 from '../assets/features/f5.png';
+import f6 from '../assets/features/f6.png';
+
 export const FeaturesData = [
   {
     id: 1,
-    img: 'src/assets/features/f1.png',
+    img: f1,
     alt: 'Free Shipping',
     title: 'Free Shipping',
     bgcolor: 'bg-yellow-200',
@@ -10,7 +17,7 @@ export const FeaturesData = [
   },
   {
     id: 2,
-    img: 'src/assets/features/f2.png',
+    img: f2,
     alt: 'Online Order',
     title: 'Online Order',
     bgcolor: 'bg-green-200',
@@ -19,7 +26,7 @@ export const FeaturesData = [
   },
   {
     id: 3,
-    img: 'src/assets/features/f3.png',
+    img: f3,
     alt: 'Save Money',
     title: 'Save Money',
     bgcolor: 'bg-blue-200',
@@ -28,7 +35,7 @@ export const FeaturesData = [
   },
   {
     id: 4,
-    img: 'src/assets/features/f4.png',
+    img: f4,
     alt: 'Promotions',
     title: 'Promotions',
     bgcolor: 'bg-indigo-200',
@@ -37,7 +44,7 @@ export const FeaturesData = [
   },
   {
     id: 5,
-    img: 'src/assets/features/f5.png',
+    img: f5,
     alt: 'Happy Sell',
     title: 'Happy Sell',
     bgcolor: 'bg-pink-200',
@@ -46,7 +53,7 @@ export const FeaturesData = [
   },
   {
     id: 6,
-    img: 'src/assets/features/f6.png',
+    img: f6,
     alt: '24/7 support',
     title: '24/7 support',
     bgcolor: 'bg-orange-200',

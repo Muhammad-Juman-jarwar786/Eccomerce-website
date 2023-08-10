@@ -1,3 +1,6 @@
+import buttonbg from '../../assets/button-background.png';
+import herosection from '../../assets/herosection.png';
+
 const HeroSection = () => {
   return (
     <div className=" bg-slate-200 flex flex-col-reverse md:flex-row pt-28 w-full drop-shadow-xl">
@@ -22,7 +25,7 @@ const HeroSection = () => {
           <button className="relative w-60 h-12 rounded-md bg-transparent hover:scale-110 transition-all duration-500">
             <img
               className="absolute inset-0 w-full h-full object-cover opacity-60"
-              src="src/assets/button-background.png"
+              src={buttonbg}
               alt=""
             />
             <span className="relative z-10 text-emerald-600 tracking-widest font-bold">
@@ -39,7 +42,7 @@ const HeroSection = () => {
           data-aos-duration="1000"
           data-aos-offset="0"
           className="w-full h-[90vh] object-contain ml-[-5vw] md:ml-0"
-          src="src/assets/herosection.png"
+          src={herosection}
           alt="Model"
         />
       </div>

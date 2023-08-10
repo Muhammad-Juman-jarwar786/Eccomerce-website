@@ -1,8 +1,9 @@
 import '../../animation/Button.css';
+import b2 from '../../assets/banner/b2.jpg';
 
 const Banner = () => {
   const bannerStyles: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b2.jpg')",
+    backgroundImage: `url(${b2})`,
     objectFit: 'contain',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -13,7 +14,6 @@ const Banner = () => {
     marginTop: '60px',
     marginBottom: '40px',
   };
-
   return (
     <div style={bannerStyles}>
       <div className="items-center text-center text-white font-bold">

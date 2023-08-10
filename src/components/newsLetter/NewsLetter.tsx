@@ -1,8 +1,9 @@
 import '../../animation/Button.css';
+import b14 from '../../assets/banner/b14.png';
 
 const NewsLetter = () => {
   const bannerStyles: React.CSSProperties = {
-    backgroundImage: "url('src/assets/banner/b14.png')",
+    backgroundImage: `url(${b14})`,
   };
 
   return (

@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MenuItems from '../menuitems/MenuItems';
 import { NavLink } from 'react-router-dom';
 import { MenuData } from '../../data/MenuData';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -143,7 +144,7 @@ const Navbar = () => {
           >
             <img
               className="w-40 cursor-pointer hover:translate-x-3 ease-in-out duration-200"
-              src="src/assets/logo.png"
+              src={logo}
               alt="Logo"
             />
           </div>

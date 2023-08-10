@@ -1,8 +1,9 @@
 import HeroBanner from '../banner/HeroBanner';
+import banner from '../../assets/about/banner.png';
 
 const CartHeroSection = () => {
   const bannerStyle = {
-    backgroundImage: "url('src/assets/about/banner.png')",
+    backgroundImage: `url(${banner})`,
   };
 
   return (

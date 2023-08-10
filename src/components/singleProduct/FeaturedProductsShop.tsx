@@ -3,14 +3,12 @@ import { ProductsData } from '../../data/ProductsData';
 
 const FeaturedProductsShop = () => {
   const productsToShow: number = 4;
-  const startIndexToShow: number = 4; // Index of the first product to show (starts from 0)
+  const startIndexToShow: number = 4;
 
-  // Function to get the range of products to show based on the startIndex
   const getProductsToDisplay = (startIndex: number, numProducts: number) => {
     return ProductsData.slice(startIndex, startIndex + numProducts);
   };
 
-  // Get the set of 4 products to show (from index 4 to 7)
   const productsToDisplay = getProductsToDisplay(
     startIndexToShow,
     productsToShow

@@ -1,4 +1,8 @@
 import '../../animation/Button.css';
+import logo from '../../assets/logo.png';
+import app from '../../assets/pay/app.jpg';
+import play from '../../assets/pay/play.jpg';
+import pay from '../../assets/pay/pay.png';
 
 const Footer = () => {
   return (
@@ -11,7 +15,7 @@ const Footer = () => {
           <div className="flex items-center justify-center md:items-start md:justify-start">
             <img
               className="w-28 md:w-36 cursor-pointer hover:translate-y-3 ease-in-out duration-200"
-              src="src/assets/logo.png"
+              src={logo}
               alt="Logo"
             />
           </div>
@@ -82,12 +86,12 @@ const Footer = () => {
           <div className="xl:grid xl:grid-cols-2 h-full items-center justify-center ">
             <img
               className="btn border-2 border-slate-500 rounded-md  cursor-pointer"
-              src="src/assets/pay/app.jpg"
+              src={app}
               alt="app"
             />
             <img
               className="border-2 border-slate-500 ml-1 rounded-md cursor-pointer"
-              src="src/assets/pay/play.jpg"
+              src={play}
               alt="google"
             />
           </div>
@@ -95,11 +99,7 @@ const Footer = () => {
             Secured Payment Gateways
           </div>
           <div className="grid items-start">
-            <img
-              className="cursor-pointer"
-              src="src/assets/pay/pay.png"
-              alt="payment"
-            />
+            <img className="cursor-pointer" src={pay} alt="payment" />
           </div>
         </div>
       </div>
@@ -122,12 +122,12 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 h-full justify-items-center items-center justify-center mt-2 md:mt-[-3rem] lg:mt-[-1rem]">
             <img
               className="border-2 border-slate-500 rounded-md ml-1 md:ml-0 cursor-pointer md:w-36 lg:w-48"
-              src="src/assets/pay/app.jpg"
+              src={app}
               alt="app"
             />
             <img
               className="border-2 border-slate-500 rounded-md ml-1 cursor-pointer md:w-36 lg:w-48"
-              src="src/assets/pay/play.jpg"
+              src={play}
               alt="google"
             />
           </div>
@@ -135,11 +135,7 @@ const Footer = () => {
             Secured Payment Gateways
           </div>
           <div className="mt-2 flex items-center lg:items-start lg:justify-start justify-center h-full md:mt-[-3rem] lg:mt-3">
-            <img
-              className="lg:w-48 cursor-pointer"
-              src="src/assets/pay/pay.png"
-              alt="payment"
-            />
+            <img className="lg:w-48 cursor-pointer" src={pay} alt="payment" />
           </div>
         </div>
       </div>

@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import FeaturedProductsShop from './FeaturedProductsShop';
 import NewsLetter from '../newsLetter/NewsLetter';
+import f1 from '../../assets/products/f1.jpg';
+import f2 from '../../assets/products/f2.jpg';
+import f3 from '../../assets/products/f3.jpg';
+import f4 from '../../assets/products/f4.jpg';
 
 const SingleProduct = () => {
   const [mainImage, setMainImage] = useState<string | undefined>();
@@ -10,12 +14,7 @@ const SingleProduct = () => {
     setMainImage(image);
   };
 
-  const secondaryImages = [
-    'src/assets/products/f1.jpg',
-    'src/assets/products/f2.jpg',
-    'src/assets/products/f3.jpg',
-    'src/assets/products/f4.jpg',
-  ];
+  const secondaryImages = [f1, f2, f3, f4];
 
   return (
     <>
