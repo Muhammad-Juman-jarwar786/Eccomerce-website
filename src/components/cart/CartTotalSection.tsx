@@ -1,4 +1,4 @@
-import { Button5, Button6 } from '../buttons/Buttons';
+import { Button } from "../buttons/Buttons";
 
 const CartTotalSection = () => {
   return (
@@ -13,7 +13,9 @@ const CartTotalSection = () => {
             placeholder="XYZ123"
             type="text"
           />
-          <Button5 />
+          <Button className="btn text-lg font-bold text-white p-1 border-2 border-emerald-600 bg-emerald-600 rounded-r-md lg:text-xl lg:p-2 lg:w-28 lg:rounded-md lg:mt-2">
+            Apply
+          </Button>
         </div>
       </div>
       <div className="w-[85vw] lg:w-[60vw] col-span-8">
@@ -48,7 +50,9 @@ const CartTotalSection = () => {
             </div>
           </div>
           <div className="p-2 lg:p-3 mt-3 lg:mt-5">
-            <Button6 />
+            <Button className="btnCheckOut bg-emerald-600 p-2 rounded-lg text-white font-bold lg:p-3 lg:text-lg">
+              Proceed to checkout
+            </Button>
           </div>
         </div>
       </div>

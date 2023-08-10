@@ -1,6 +1,6 @@
-import b17 from '../../assets/banner/b17.jpg';
-import b10 from '../../assets/banner/b10.jpg';
-import { Button } from '../buttons/Buttons';
+import b17 from "../../assets/banner/b17.jpg";
+import b10 from "../../assets/banner/b10.jpg";
+import { Button } from "../buttons/Buttons";
 
 const BannerShowCase = () => {
   const bannerStyles: React.CSSProperties = {
@@ -27,7 +27,9 @@ const BannerShowCase = () => {
             The best Classic dress is on sale
           </div>
           <div className="mt-2">
-            <Button text="Learn More" />
+            <Button className="btn text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
+              Learn More
+            </Button>
           </div>
         </div>
       </div>
@@ -46,20 +48,9 @@ const BannerShowCase = () => {
             The best Classis dress is on sale
           </div>
           <div className="mt-2">
-            <Button
-              text="Collection"
-              classname="btn"
-              txtcolor="text-white"
-              border="border-2"
-              grouphoverbg="group-hover:bg-emerald-600"
-              grouphoverborder="group-hover:border-none"
-              borderclr="border-slate-100"
-              p="p-2"
-              mt="mt-3"
-              mdmt="md:mt-6"
-              txtsize="text-md"
-              txtmdsize="md:text-xl"
-            />
+            <Button className="btn text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
+              Collection
+            </Button>
           </div>
         </div>
       </div>

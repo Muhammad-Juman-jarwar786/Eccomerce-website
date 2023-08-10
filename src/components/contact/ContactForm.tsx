@@ -1,19 +1,19 @@
-import { useFormik } from 'formik';
-import { ContactFormValidation } from '../../validation/ContactFormValidation';
+import { useFormik } from "formik";
+import { ContactFormValidation } from "../../validation/ContactFormValidation";
 
-import people1 from '../../assets/people/1.png';
-import people2 from '../../assets/people/2.png';
-import people3 from '../../assets/people/3.png';
-import { FormValues } from '../../interface/Interfaces';
-import { Button7 } from '../buttons/Buttons';
+import people1 from "../../assets/people/1.png";
+import people2 from "../../assets/people/2.png";
+import people3 from "../../assets/people/3.png";
+import { FormValues } from "../../interface/Interfaces";
+import { Button } from "../buttons/Buttons";
 
 const ContactForm = () => {
   const formik = useFormik<FormValues>({
     initialValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     },
     validationSchema: ContactFormValidation,
     onSubmit: (values) => {
@@ -24,23 +24,23 @@ const ContactForm = () => {
 
   const borderColorName =
     formik.touched.name && formik.errors.name
-      ? 'border-red-400'
-      : 'border-gray-300';
+      ? "border-red-400"
+      : "border-gray-300";
 
   const borderColorEmail =
     formik.touched.email && formik.errors.email
-      ? 'border-red-400'
-      : 'border-gray-300';
+      ? "border-red-400"
+      : "border-gray-300";
 
   const borderColorSubject =
     formik.touched.subject && formik.errors.subject
-      ? 'border-red-400'
-      : 'border-gray-300';
+      ? "border-red-400"
+      : "border-gray-300";
 
   const borderColorMessage =
     formik.touched.message && formik.errors.message
-      ? 'border-red-400'
-      : 'border-gray-300';
+      ? "border-red-400"
+      : "border-gray-300";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 mt-10 lg:mt-20 border-2 border-slate-600 mx-5 md:gap-5 ">
@@ -115,7 +115,9 @@ const ContactForm = () => {
               {formik.errors.message}
             </div>
           ) : null}
-          <Button7 />
+          <Button className="btn bg-emerald-600 mt-4 lg:mt-6 lg:w-32 p-2 lg:p-3 rounded-md text-white text-lg">
+            Submit
+          </Button>
         </form>
       </div>
       <div className="mt-10 md:mt-0 text-center tracking-wider col-span-5 lg:grid lg:grid-cols-1">

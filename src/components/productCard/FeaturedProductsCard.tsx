@@ -1,14 +1,22 @@
-import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { useAppDispatch } from "../../hooks/ReduxToolkitHooks";
+import { increment } from "../../Slice/CartCounter";
 
 const FeaturedProductsCard = (props: any) => {
+  const dispatch = useAppDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(increment());
+  };
+
   return (
     <>
       <div
         data-aos={props.animation}
         data-aos-easing="ease-in-back"
-        data-aos-duration="1000"
+        // data-aos-duration="1000"
         className="bg-white w-full border-2 rounded-3xl mt-9 p-3 shadow-lg group "
       >
         <div className="peer w-full h-auto hover:scale-110 hover:shadow-xl hover:border-spacing-4 hover:border-8 hover:border-white hover:rounded-3xl transition-all duration-700 hover:animate-pulse">
@@ -25,17 +33,20 @@ const FeaturedProductsCard = (props: any) => {
           </h1>
           <div>
             <div className="text-md sm:text-sm">
-              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
             </div>
             <div className="flex justify-between text-2xl sm:text-xl">
               <div className="text-teal-700 font-medium mt-2">
                 ${props.price}
               </div>
-              <div className="hover:scale-110 transition-all duration-500 ease-in-out bg-slate-300 w-12 h-12 p-3 text-center items-center justify-center  relative rounded-full bg-opacity-40 cursor-pointer">
+              <div
+                onClick={addToCartHandler}
+                className="hover:scale-110 transition-all duration-700 active:scale-90 active:text-emerald-800 ease-in-out bg-slate-300 w-12 h-12 p-3 text-center items-center justify-center  relative rounded-full bg-opacity-40 cursor-pointer"
+              >
                 <FontAwesomeIcon
                   className="text-teal-700 w-7 h-7 sm:w-6 sm:h-6 m-auto"
                   icon={faCartShopping}

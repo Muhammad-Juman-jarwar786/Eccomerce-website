@@ -1,5 +1,5 @@
-import b14 from '../../assets/banner/b14.png';
-import { Button8 } from '../buttons/Buttons';
+import b14 from "../../assets/banner/b14.png";
+import { Button } from "../buttons/Buttons";
 
 const NewsLetter = () => {
   const bannerStyles: React.CSSProperties = {
@@ -20,7 +20,7 @@ const NewsLetter = () => {
             <div className="font-bold text-slate-300 mt-4 text-md md:text-lg lg:text-xl">
               Get E-mail updates about our latest shop and
               <span className="font-bold text-orange-400">
-                {' '}
+                {" "}
                 special offers.
               </span>
             </div>
@@ -31,7 +31,9 @@ const NewsLetter = () => {
               type="email"
               placeholder="Your email address"
             />
-            <Button8 />
+            <Button className="btnSignUp bg-emerald-600 w-28 md:w-36 lg:w-40 px-4 p-3 text-white rounded-r-md text-md md:text-lg lg:text-xl">
+              Sign Up
+            </Button>
           </div>
         </div>
       </div>

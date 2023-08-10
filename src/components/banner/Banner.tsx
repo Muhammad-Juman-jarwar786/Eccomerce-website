@@ -1,5 +1,5 @@
-import b2 from '../../assets/banner/b2.jpg';
-import { Button2 } from '../buttons/Buttons';
+import b2 from "../../assets/banner/b2.jpg";
+import { Button } from "../buttons/Buttons";
 
 const Banner = () => {
   const bannerStyles: React.CSSProperties = {
@@ -19,7 +19,9 @@ const Banner = () => {
           Accessories
         </div>
         <div className="">
-          <Button2 text="Explore More" />
+          <Button className="btn p-2 bg-red-600 rounded-md mt-3 text-lg md:text-xl">
+            Explore More
+          </Button>
         </div>
       </div>
     </div>

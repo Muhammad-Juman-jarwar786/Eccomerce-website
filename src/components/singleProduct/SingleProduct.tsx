@@ -1,20 +1,35 @@
-import { useState } from 'react';
-import FeaturedProductsShop from './FeaturedProductsShop';
-import NewsLetter from '../newsLetter/NewsLetter';
-import f1 from '../../assets/products/f1.jpg';
-import f2 from '../../assets/products/f2.jpg';
-import f3 from '../../assets/products/f3.jpg';
-import f4 from '../../assets/products/f4.jpg';
-import { Button9 } from '../buttons/Buttons';
+import { useState } from "react";
+import FeaturedProductsShop from "./FeaturedProductsShop";
+import NewsLetter from "../newsLetter/NewsLetter";
+import f1 from "../../assets/products/f1.jpg";
+import f2 from "../../assets/products/f2.jpg";
+import f3 from "../../assets/products/f3.jpg";
+import f4 from "../../assets/products/f4.jpg";
+import { Button } from "../buttons/Buttons";
+import { useAppDispatch } from "../../hooks/ReduxToolkitHooks";
+import { incrementByAmount } from "../../Slice/CartCounter";
 
 const SingleProduct = () => {
   const [mainImage, setMainImage] = useState<string | undefined>();
+  const [inputVal, setInputVal] = useState(0);
 
   const handleSecondaryImage = (image: string) => {
     setMainImage(image);
   };
 
   const secondaryImages = [f1, f2, f3, f4];
+
+  const dispatch = useAppDispatch();
+
+  const inputChangeHandler = (e: any) => {
+    const val = e.target.value;
+    setInputVal(val);
+  };
+
+  const onAddToCartHandler = () => {
+    dispatch(incrementByAmount(inputVal));
+    console.log(inputVal);
+  };
 
   return (
     <>
@@ -57,8 +72,15 @@ const SingleProduct = () => {
             <input
               className="w-14 lg:w-20 lg:text-xl h-full p-2 lg:p-3 border-2 text-lg border-slate-400 text-center outline-none"
               type="number"
+              onChange={inputChangeHandler}
+              value={inputVal}
             />
-            <Button9 />
+            <Button
+              onClick={onAddToCartHandler}
+              className="btn p-2 lg:p-3 h-full text-white bg-emerald-600 text-lg lg:text-xl"
+            >
+              Add To Cart
+            </Button>
           </div>
           <div className="text-black text-2xl mt-4 lg:text-3xl">
             Product Details

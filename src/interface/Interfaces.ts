@@ -17,3 +17,7 @@ export interface FeatureCardProps {
   title: string;
   animation: string;
 }
+
+export interface CartCounterState {
+  value: number;
+}
