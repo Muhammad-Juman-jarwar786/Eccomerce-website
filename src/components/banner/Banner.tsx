@@ -1,3 +1,5 @@
+import '../../animation/Button.css';
+
 const Banner = () => {
   const bannerStyles: React.CSSProperties = {
     backgroundImage: "url('src/assets/banner/b2.jpg')",
@@ -22,7 +24,7 @@ const Banner = () => {
           Accessories
         </div>
         <div className="">
-          <button className="text-black p-2 rounded-md mt-3 text-lg md:text-xl   ">
+          <button className="btn p-2 shadow-md bg-red-600 rounded-md mt-3 text-lg md:text-xl hover:scale-110 transition-all duration-700 active:scale-90 ">
             Explore More
           </button>
         </div>

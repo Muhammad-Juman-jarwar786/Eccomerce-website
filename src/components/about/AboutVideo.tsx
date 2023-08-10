@@ -3,7 +3,7 @@ import video from '../../assets/about/1.mp4';
 const AboutVideo = () => {
   return (
     <div className="grid text-center items-center mt-20 mx-auto min-w-2xl">
-      <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+      <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
         Download Our{' '}
         <span className="cursor-pointer underline underline-offset-1 text-violet-900">
           App

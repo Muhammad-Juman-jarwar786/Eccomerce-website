@@ -1,3 +1,5 @@
+import '../../animation/Button.css';
+
 const NewsLetter = () => {
   const bannerStyles: React.CSSProperties = {
     backgroundImage: "url('src/assets/banner/b14.png')",
@@ -24,11 +26,11 @@ const NewsLetter = () => {
           </div>
           <div className="flex-row lg:flex lg:mr-10 font-bold tracking-wider mt-5">
             <input
-              className="outline-none  p-3 w-52 md:w-64 lg:w-96 rounded-l-md text-md md:text-lg lg:text-xl"
-              type="text"
+              className="outline-none text-black  p-3 w-52 md:w-64 lg:w-96 rounded-l-md text-md md:text-lg lg:text-xl"
+              type="email"
               placeholder="Your email address"
             />
-            <button className="bg-emerald-700 w-28 md:w-36 lg:w-40 px-4 p-3 text-white rounded-r-md text-md md:text-lg lg:text-xl">
+            <button className="btnSignUp hover:scale-110 transition-all duration-700 active:scale-90 bg-emerald-700 w-28 md:w-36 lg:w-40 px-4 p-3 text-white rounded-r-md text-md md:text-lg lg:text-xl">
               Sign Up
             </button>
           </div>

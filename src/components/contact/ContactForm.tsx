@@ -61,6 +61,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             placeholder="Your Name"
+            autoComplete="off"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
@@ -75,6 +76,7 @@ const ContactForm = () => {
             type="email"
             name="email"
             placeholder="E-mail"
+            autoComplete="off"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
@@ -89,6 +91,7 @@ const ContactForm = () => {
             type="text"
             name="subject"
             placeholder="Subject"
+            autoComplete="off"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.subject}
@@ -103,6 +106,7 @@ const ContactForm = () => {
             name="message"
             rows={4}
             placeholder="Your Message"
+            autoComplete="off"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}

@@ -107,6 +107,24 @@ const Navbar = () => {
     }
   }, []);
 
+  const cartRef = useRef<HTMLAnchorElement | null>(null);
+
+  useEffect(() => {
+    if (cartRef.current) {
+      const element = cartRef.current;
+
+      element.style.opacity = '0';
+
+      anime({
+        targets: element,
+        opacity: '100%',
+        duration: 1000,
+        delay: 2500,
+        easing: 'easeInOutQuad',
+      });
+    }
+  }, []);
+
   return (
     <div className="overflow-hidden">
       <nav
@@ -131,19 +149,14 @@ const Navbar = () => {
           </div>
           <NavLink
             to="/cart"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="2000"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            data-aos-offset="0"
-            className="md:hidden mt-8 relative cursor-pointer justify-center items-center flex"
+            ref={cartRef}
+            className="md:hidden mt-8 relative cursor-pointer justify-center items-center flex group "
           >
             <FontAwesomeIcon
-              className="hover:scale-110 ease-in-out transition-all duration-500 text-[1.9rem] relative"
+              className="hover:scale-110 ease-in-out transition-all duration-700 text-[1.9rem] relative"
               icon={faCartShopping}
             />
-            <span className="absolute left-3 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+            <span className=" group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute left-3 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
               {1}
             </span>
           </NavLink>
@@ -202,19 +215,14 @@ const Navbar = () => {
             ))}
             <NavLink
               to="/cart"
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="2000"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-offset="0"
+              ref={cartRef}
               className="relative cursor-pointer group"
             >
               <FontAwesomeIcon
                 className="text-[1.9rem] hover:scale-110 ease-in-out transition-all duration-500"
                 icon={faCartShopping}
               />
-              <span className="group-hover:scale-110 ease-in-out transition-all duration-500 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+              <span className="group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-500 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
                 {12}
               </span>
             </NavLink>

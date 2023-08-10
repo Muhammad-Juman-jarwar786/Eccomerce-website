@@ -11,7 +11,7 @@ const CartTotalSection = () => {
             placeholder="XYZ123"
             type="text"
           />
-          <button className="text-lg font-bold text-white p-1 border-2 border-emerald-600 bg-emerald-600 rounded-r-md lg:text-xl lg:p-2 lg:w-28 lg:rounded-md lg:mt-2">
+          <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-lg font-bold text-white p-1 border-2 border-emerald-600 bg-emerald-600 rounded-r-md lg:text-xl lg:p-2 lg:w-28 lg:rounded-md lg:mt-2">
             Apply
           </button>
         </div>
@@ -48,7 +48,7 @@ const CartTotalSection = () => {
             </div>
           </div>
           <div className="p-2 lg:p-3 mt-3 lg:mt-5">
-            <button className="bg-emerald-600 p-2 rounded-lg text-white font-bold lg:p-3 lg:text-lg">
+            <button className="btnCheckOut hover:scale-110 transition-all duration-700 active:scale-90 bg-emerald-600 p-2 rounded-lg text-white font-bold lg:p-3 lg:text-lg">
               Proceed to checkout
             </button>
           </div>

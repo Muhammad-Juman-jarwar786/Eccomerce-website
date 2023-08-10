@@ -1,3 +1,5 @@
+import '../../animation/Button.css';
+
 const Footer = () => {
   return (
     <div
@@ -79,7 +81,7 @@ const Footer = () => {
           </div>
           <div className="xl:grid xl:grid-cols-2 h-full items-center justify-center ">
             <img
-              className="border-2 border-slate-500 rounded-md  cursor-pointer"
+              className="btn border-2 border-slate-500 rounded-md  cursor-pointer"
               src="src/assets/pay/app.jpg"
               alt="app"
             />
@@ -93,7 +95,11 @@ const Footer = () => {
             Secured Payment Gateways
           </div>
           <div className="grid items-start">
-            <img className="" src="src/assets/pay/pay.png" alt="payment" />
+            <img
+              className="cursor-pointer"
+              src="src/assets/pay/pay.png"
+              alt="payment"
+            />
           </div>
         </div>
       </div>
@@ -130,7 +136,7 @@ const Footer = () => {
           </div>
           <div className="mt-2 flex items-center lg:items-start lg:justify-start justify-center h-full md:mt-[-3rem] lg:mt-3">
             <img
-              className="lg:w-48"
+              className="lg:w-48 cursor-pointer"
               src="src/assets/pay/pay.png"
               alt="payment"
             />

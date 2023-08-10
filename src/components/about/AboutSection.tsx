@@ -5,7 +5,7 @@ const AboutSection = () => {
         <img src="src/assets/about/a6.jpg" alt="" />
       </div>
       <div className="mt-10 lg:mt-20 tracking-wider h-fit ">
-        <div className="text-3xl md:text-4xl  font-bold text-center lg:text-left">
+        <div className="text-2xl md:text-3xl  font-bold text-center lg:text-left">
           Who We Are?
         </div>
         <div className="text-gray-500 text-center mt-5 lg:text-left">

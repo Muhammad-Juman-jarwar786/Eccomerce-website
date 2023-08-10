@@ -1,3 +1,5 @@
+import '../../animation/Button.css';
+
 const BannerShowCase = () => {
   const bannerStyles: React.CSSProperties = {
     backgroundImage: "url('src/assets/banner/b17.jpg')",
@@ -23,7 +25,7 @@ const BannerShowCase = () => {
             The best Classic dress is on sale
           </div>
           <div className="mt-2">
-            <button className="button text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
+            <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
               Learn More
             </button>
           </div>
@@ -44,7 +46,7 @@ const BannerShowCase = () => {
             The best Classis dress is on sale
           </div>
           <div className="mt-2">
-            <button className="button text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
+            <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
               Collection
             </button>
           </div>

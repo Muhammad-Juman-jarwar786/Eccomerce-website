@@ -6,7 +6,11 @@ const CartProduct = () => {
   return (
     <tr className="mt-3 text-sm lg:text-lg grid grid-cols-6 justify-items-center text-center font-medium">
       <td className="w-14 lg:w-20">
-        <img src="src/assets/products/f1.jpg" alt="product" />
+        <img
+          className="transition-all duration-700 hover:scale-150 cursor-pointer object-cover hover:shadow-md hover:border-4 hover:border-white"
+          src="src/assets/products/f1.jpg"
+          alt="product"
+        />
       </td>
       <td className="items-center grid grid-cols-1">
         <p className="text-md xl:text-xl">Cartoon Astronaut T-Shirt</p>
@@ -26,7 +30,7 @@ const CartProduct = () => {
         <p className="text-md xl:text-xl">$100</p>
       </td>
       <td className="items-center grid grid-cols-1">
-        <i className="text-red-500 text-lg lg:text-xl xl:text-2xl fa-solid fa-trash"></i>
+        <i className="transition-all duration-700 hover:scale-125 cursor-pointer text-red-500 text-lg lg:text-xl xl:text-2xl fa-solid fa-trash"></i>
       </td>
     </tr>
   );

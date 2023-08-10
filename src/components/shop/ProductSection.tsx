@@ -1,6 +1,6 @@
 import FeaturedProductsCard from '../productCard/FeaturedProductsCard';
-
 import { ProductsData } from '../../data/ProductsData';
+import '../../animation/Button.css';
 
 const ProductSection = () => {
   return (
@@ -20,13 +20,13 @@ const ProductSection = () => {
         ))}
       </div>
       <div className="flex h-full justify-center items-center font-bold text-2xl lg:text-3xl gap-1 mt-20 text-white">
-        <div className="lg:w-16 lg:h-16 cursor-pointer w-10 h-10 bg-emerald-700 text-center flex justify-center items-center rounded-md shadow-md">
+        <div className="btn hover:scale-110 transition-all duration-700 active:scale-90 lg:w-16 lg:h-16 cursor-pointer w-10 h-10 bg-emerald-700 text-center flex justify-center items-center rounded-md shadow-md">
           1
         </div>
-        <div className="lg:w-16 lg:h-16 cursor-pointer w-10 h-10 bg-emerald-700 text-center flex justify-center items-center rounded-md shadow-md">
+        <div className="btn hover:scale-110 transition-all duration-700 active:scale-90 lg:w-16 lg:h-16 cursor-pointer w-10 h-10 bg-emerald-700 text-center flex justify-center items-center rounded-md shadow-md">
           2
         </div>
-        <div className="lg:w-20 lg:h-16 cursor-pointer w-14 h-10 bg-emerald-700 items-center rounded-md shadow-md flex justify-center">
+        <div className="btnSignUp hover:scale-110 transition-all duration-700 active:scale-90 lg:w-20 lg:h-16 cursor-pointer w-14 h-10 bg-emerald-700 items-center rounded-md shadow-md flex justify-center">
           <i className="fa-solid fa-arrow-right-long w-2 font-normal mr-3"></i>
         </div>
       </div>
