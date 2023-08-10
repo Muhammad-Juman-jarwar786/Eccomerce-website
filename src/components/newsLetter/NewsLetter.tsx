@@ -1,5 +1,5 @@
-import '../../animation/Button.css';
 import b14 from '../../assets/banner/b14.png';
+import { Button8 } from '../buttons/Buttons';
 
 const NewsLetter = () => {
   const bannerStyles: React.CSSProperties = {
@@ -31,9 +31,7 @@ const NewsLetter = () => {
               type="email"
               placeholder="Your email address"
             />
-            <button className="btnSignUp hover:scale-110 transition-all duration-700 active:scale-90 bg-emerald-700 w-28 md:w-36 lg:w-40 px-4 p-3 text-white rounded-r-md text-md md:text-lg lg:text-xl">
-              Sign Up
-            </button>
+            <Button8 />
           </div>
         </div>
       </div>

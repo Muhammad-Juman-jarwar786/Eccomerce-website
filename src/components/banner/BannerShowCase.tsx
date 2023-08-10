@@ -1,7 +1,6 @@
-import '../../animation/Button.css';
-
 import b17 from '../../assets/banner/b17.jpg';
 import b10 from '../../assets/banner/b10.jpg';
+import { Button } from '../buttons/Buttons';
 
 const BannerShowCase = () => {
   const bannerStyles: React.CSSProperties = {
@@ -28,9 +27,7 @@ const BannerShowCase = () => {
             The best Classic dress is on sale
           </div>
           <div className="mt-2">
-            <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
-              Learn More
-            </button>
+            <Button text="Learn More" />
           </div>
         </div>
       </div>
@@ -49,9 +46,20 @@ const BannerShowCase = () => {
             The best Classis dress is on sale
           </div>
           <div className="mt-2">
-            <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-white border-2 group-hover:bg-emerald-600 group-hover:border-none border-slate-100 p-2 mt-3 md:mt-6 text-md md:text-xl">
-              Collection
-            </button>
+            <Button
+              text="Collection"
+              classname="btn"
+              txtcolor="text-white"
+              border="border-2"
+              grouphoverbg="group-hover:bg-emerald-600"
+              grouphoverborder="group-hover:border-none"
+              borderclr="border-slate-100"
+              p="p-2"
+              mt="mt-3"
+              mdmt="md:mt-6"
+              txtsize="text-md"
+              txtmdsize="md:text-xl"
+            />
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { Button5, Button6 } from '../buttons/Buttons';
+
 const CartTotalSection = () => {
   return (
     <div className="mb-5 lg:mb-10 overflow-hidden mt-10 lg:mt-20 grid grid-cols-1 justify-items-center lg:justify-items-start mx-auto lg:grid-cols-12">
@@ -11,9 +13,7 @@ const CartTotalSection = () => {
             placeholder="XYZ123"
             type="text"
           />
-          <button className="btn hover:scale-110 transition-all duration-700 active:scale-90 text-lg font-bold text-white p-1 border-2 border-emerald-600 bg-emerald-600 rounded-r-md lg:text-xl lg:p-2 lg:w-28 lg:rounded-md lg:mt-2">
-            Apply
-          </button>
+          <Button5 />
         </div>
       </div>
       <div className="w-[85vw] lg:w-[60vw] col-span-8">
@@ -48,9 +48,7 @@ const CartTotalSection = () => {
             </div>
           </div>
           <div className="p-2 lg:p-3 mt-3 lg:mt-5">
-            <button className="btnCheckOut hover:scale-110 transition-all duration-700 active:scale-90 bg-emerald-600 p-2 rounded-lg text-white font-bold lg:p-3 lg:text-lg">
-              Proceed to checkout
-            </button>
+            <Button6 />
           </div>
         </div>
       </div>

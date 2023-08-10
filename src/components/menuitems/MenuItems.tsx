@@ -5,7 +5,7 @@ const MenuItems = (props: any) => {
   const location = useLocation();
 
   return (
-    <NavLink to={props.to} className="relative cursor-pointer group MenuItems">
+    <NavLink to={props.to} className=" relative cursor-pointer group MenuItems">
       <li
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"

@@ -4,13 +4,8 @@ import { ContactFormValidation } from '../../validation/ContactFormValidation';
 import people1 from '../../assets/people/1.png';
 import people2 from '../../assets/people/2.png';
 import people3 from '../../assets/people/3.png';
-
-interface FormValues {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+import { FormValues } from '../../interface/Interfaces';
+import { Button7 } from '../buttons/Buttons';
 
 const ContactForm = () => {
   const formik = useFormik<FormValues>({
@@ -120,24 +115,29 @@ const ContactForm = () => {
               {formik.errors.message}
             </div>
           ) : null}
-          <button
-            type="submit"
-            className="bg-emerald-600 mt-4 lg:mt-6 lg:w-32 p-2 lg:p-3 rounded-md text-white text-lg"
-          >
-            Submit
-          </button>
+          <Button7 />
         </form>
       </div>
       <div className="mt-10 md:mt-0 text-center tracking-wider col-span-5 lg:grid lg:grid-cols-1">
         <div className="mt-4 lg:mt-10 grid-cols-1 grid justify-items-center ">
-          <div className="lg:flex lg:flex-col lg:justify-items-end">
+          <div
+            data-aos="zoom-in-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+            className="lg:flex lg:flex-col lg:justify-items-end"
+          >
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full  "
               src={people1}
               alt=""
             />
           </div>
-          <div className="">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+            className=""
+          >
             <h1 className="text-xl font-bold md:text-lg lg:text-xl">
               John Doe
             </h1>
@@ -153,14 +153,22 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mt-4 lg:mt-10 grid-cols-1 grid justify-items-center ">
-          <div>
+          <div
+            data-aos="zoom-in-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+          >
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full"
               src={people2}
               alt=""
             />
           </div>
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+          >
             <h1 className="text-xl font-bold md:text-lg lg:text-xl">
               William Smith
             </h1>
@@ -176,14 +184,22 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mt-4 lg:mt-10 grid-cols-1 grid justify-items-center ">
-          <div>
+          <div
+            data-aos="zoom-in-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+          >
             <img
               className="md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full"
               src={people3}
               alt=""
             />
           </div>
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-back"
+          >
             <h1 className="text-xl font-bold md:text-lg lg:text-xl">
               Emma Stone
             </h1>

@@ -16,6 +16,8 @@ export const BlogData = [
     img: b1,
     alt: 'blog1 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 2,
@@ -26,6 +28,8 @@ export const BlogData = [
     img: b2,
     alt: 'blog2 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ export const BlogData = [
     img: b3,
     alt: 'blog3 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 4,
@@ -46,6 +52,8 @@ export const BlogData = [
     img: b4,
     alt: 'blog4 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 5,
@@ -56,6 +64,8 @@ export const BlogData = [
     img: b5,
     alt: 'blog5 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 6,
@@ -66,6 +76,8 @@ export const BlogData = [
     img: b6,
     alt: 'blog6 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
   {
     id: 7,
@@ -76,5 +88,7 @@ export const BlogData = [
     img: b7,
     alt: 'blog7 image',
     button: 'CONTINUE READING ————',
+    imgAnimation: 'fade-right',
+    txtAnimation: 'fade-left',
   },
 ];

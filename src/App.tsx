@@ -31,9 +31,7 @@
 
 // export default App;
 
-import React, { useEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
-import anime from 'animejs';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
@@ -44,33 +42,7 @@ import './fonts/CustomFonts.css';
 import Footer from './components/footer/Footer';
 import SingleProduct from './components/singleProduct/SingleProduct';
 import Cart from './pages/Cart';
-
-interface RouteTransitionProps {
-  children: React.ReactNode;
-}
-
-const RouteTransition: React.FC<RouteTransitionProps> = ({ children }) => {
-  const location = useLocation();
-
-  useEffect(() => {
-    const animation = anime.timeline({
-      duration: 1000,
-      easing: 'easeInOutSine',
-    });
-
-    animation
-      .add({
-        targets: '.route-transition',
-        rotateY: '+=180',
-      })
-      .add({
-        targets: '.route-transition',
-        rotateY: '+=180',
-      });
-  }, [location]);
-
-  return <div className="route-transition">{children}</div>;
-};
+import { RouteTransition } from './animation/FlipPage';
 
 function App() {
   return (

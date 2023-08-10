@@ -1,21 +1,16 @@
-import '../../animation/Button.css';
 import b2 from '../../assets/banner/b2.jpg';
+import { Button2 } from '../buttons/Buttons';
 
 const Banner = () => {
   const bannerStyles: React.CSSProperties = {
     backgroundImage: `url(${b2})`,
-    objectFit: 'contain',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '250px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: '60px',
-    marginBottom: '40px',
   };
+
   return (
-    <div style={bannerStyles}>
+    <div
+      style={bannerStyles}
+      className="mt-[60px] mb-10 items-center flex h-[250px] object-contain justify-center bg-cover bg-center"
+    >
       <div className="items-center text-center text-white font-bold">
         <div className="text-xl md:text-2xl mb-3">Repair Services</div>
         <div className="text-2xl md:text-3xl">
@@ -24,9 +19,7 @@ const Banner = () => {
           Accessories
         </div>
         <div className="">
-          <button className="btn p-2 shadow-md bg-red-600 rounded-md mt-3 text-lg md:text-xl hover:scale-110 transition-all duration-700 active:scale-90 ">
-            Explore More
-          </button>
+          <Button2 text="Explore More" />
         </div>
       </div>
     </div>

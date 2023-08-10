@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import {
   faBars,
@@ -11,41 +10,31 @@ import MenuItems from '../menuitems/MenuItems';
 import { NavLink } from 'react-router-dom';
 import { MenuData } from '../../data/MenuData';
 import logo from '../../assets/logo.png';
+import {
+  CartIconAnimation,
+  NavbarAnimation,
+  ShowMobileMenu,
+  mobCartIconAnimation,
+  mobMenuNavbar,
+} from '../../animation/Navbar';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const cartRef = useRef<HTMLAnchorElement | null>(null);
+  const logoRef = useRef<HTMLDivElement | null>(null);
+  const mobCartRef = useRef<HTMLAnchorElement | null>(null);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  useEffect(() => {
-    if (showMenu && menuRef.current) {
-      const divElement = menuRef.current;
-
-      divElement.style.opacity = '0';
-
-      anime({
-        targets: divElement,
-        opacity: '1',
-        duration: 3000,
-        easing: 'easeInOutQuad',
-        direction: 'normal',
-      });
-    } else if (!showMenu && menuRef.current) {
-      const divElement = menuRef.current;
-      divElement.style.opacity = '1';
-      anime({
-        targets: divElement,
-        opacity: '0',
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        direction: 'normal',
-      });
-    }
-  }, [toggleMenu]);
+  ShowMobileMenu(menuRef, showMenu, toggleMenu);
+  mobMenuNavbar(logoRef, showMenu, toggleMenu);
+  NavbarAnimation(logoRef);
+  CartIconAnimation(cartRef);
+  mobCartIconAnimation(mobCartRef);
 
   const closeMenu = () => {
     setShowMenu(false);
@@ -61,70 +50,6 @@ const Navbar = () => {
       behavior: 'smooth',
     });
   };
-  const logoRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (showMenu && logoRef.current) {
-      const element = logoRef.current;
-
-      element.style.height = '11%';
-
-      anime({
-        targets: element,
-        height: '70%',
-        duration: 2000,
-        easing: 'easeInOutQuad',
-        direction: 'normal',
-      });
-    } else if (!showMenu && logoRef.current) {
-      const element = logoRef.current;
-
-      element.style.height = '70%';
-
-      anime({
-        targets: element,
-        height: '11%',
-        duration: 2000,
-        easing: 'easeInOutQuad',
-      });
-    }
-  }, [toggleMenu]);
-
-  useEffect(() => {
-    if (logoRef.current) {
-      const element = logoRef.current;
-
-      element.style.width = '0';
-      element.style.height = '11%';
-
-      anime({
-        targets: element,
-        width: '100%',
-        height: '11%',
-        duration: 2000,
-        easing: 'easeInOutQuad',
-        direction: 'normal',
-      });
-    }
-  }, []);
-
-  const cartRef = useRef<HTMLAnchorElement | null>(null);
-
-  useEffect(() => {
-    if (cartRef.current) {
-      const element = cartRef.current;
-
-      element.style.opacity = '0';
-
-      anime({
-        targets: element,
-        opacity: '100%',
-        duration: 1000,
-        delay: 2500,
-        easing: 'easeInOutQuad',
-      });
-    }
-  }, []);
 
   return (
     <div className="overflow-hidden">
@@ -150,7 +75,8 @@ const Navbar = () => {
           </div>
           <NavLink
             to="/cart"
-            ref={cartRef}
+            ref={mobCartRef}
+            onClick={scrollTop}
             className="md:hidden mt-8 relative cursor-pointer justify-center items-center flex group "
           >
             <FontAwesomeIcon
@@ -218,12 +144,13 @@ const Navbar = () => {
               to="/cart"
               ref={cartRef}
               className="relative cursor-pointer group"
+              onClick={scrollTop}
             >
               <FontAwesomeIcon
-                className="text-[1.9rem] hover:scale-110 ease-in-out transition-all duration-500"
+                className="text-[1.9rem] hover:scale-110 ease-in-out transition-all duration-700"
                 icon={faCartShopping}
               />
-              <span className="group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-500 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
+              <span className="group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
                 {12}
               </span>
             </NavLink>

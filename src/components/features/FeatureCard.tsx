@@ -1,11 +1,4 @@
-interface FeatureCardProps {
-  img: string;
-  alt: string;
-  bgcolor: string;
-  txtcolor: string;
-  title: string;
-  animation: string;
-}
+import { FeatureCardProps } from '../../interface/Interfaces';
 
 const FeatureCard: React.FC<FeatureCardProps> = (props) => {
   return (
