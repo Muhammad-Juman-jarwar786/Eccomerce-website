@@ -1,6 +1,9 @@
 import CartProduct from './CartProduct';
 import { useAppDispatch, useAppSelector } from '../../hooks/ReduxToolkitHooks';
 import { removeFromCart } from '../../Slice/CartProductsSlice';
+import { useEffect, useState } from 'react';
+import { setSubTotal, setTotalQuantityCart } from '../../Slice/CartTotalsSlice';
+import { store } from '../../redux/store';
 
 const CartProductsSection = () => {
   const cart = useAppSelector((state) => state.addToCart.products);
@@ -32,6 +35,38 @@ const CartProductsSection = () => {
   const removeProductHandler = (product: any) => {
     dispatch(removeFromCart(product));
   };
+
+  const [subTotalVal, setSubTotalVal] = useState(0);
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
+
+  useEffect(() => {
+    const total: any = uniqueProductsArray.reduce(
+      (accumulator, product: any) => {
+        return accumulator + product.quantity;
+      },
+      0
+    );
+
+    setTotalQuantity(total);
+  }, [uniqueProductsArray]);
+
+  useEffect(() => {
+    // console.log(totalQuantity);
+    store.dispatch(setTotalQuantityCart(totalQuantity));
+  }, [totalQuantity]);
+
+  useEffect(() => {
+    const total = cart.reduce((accumulator, product: any) => {
+      return accumulator + parseFloat(product.price);
+    }, 0);
+
+    setSubTotalVal(total);
+  }, [cart]);
+
+  useEffect(() => {
+    dispatch(setSubTotal(subTotalVal));
+  }, [subTotalVal]);
 
   return (
     <div className="mt-10">

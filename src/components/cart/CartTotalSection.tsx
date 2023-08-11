@@ -1,6 +1,13 @@
-import { Button } from "../buttons/Buttons";
+import { useAppSelector } from '../../hooks/ReduxToolkitHooks';
+import { Button } from '../buttons/Buttons';
 
 const CartTotalSection = () => {
+  const subTotal = useAppSelector((state) => state.setSubTotal.subTotal);
+
+  const Shipping = 100;
+
+  const Total = subTotal + Shipping;
+
   return (
     <div className="mb-5 lg:mb-10 overflow-hidden mt-10 lg:mt-20 grid grid-cols-1 justify-items-center lg:justify-items-start mx-auto lg:grid-cols-12">
       <div className="lg:w-80 lg:ml-5 col-span-4">
@@ -31,7 +38,7 @@ const CartTotalSection = () => {
                 Cart Subtotal
               </div>
               <div className="text-lg border-b-2 border-l-2 p-1 lg:text-xl lg:p-2">
-                $100
+                ${subTotal}
               </div>
             </div>
             <div className="grid grid-cols-2">
@@ -39,13 +46,13 @@ const CartTotalSection = () => {
                 Shipping
               </div>
               <div className="text-lg border-b-2 border-l-2 p-1 lg:text-xl lg:p-2">
-                Free
+                ${Shipping}
               </div>
             </div>
             <div className="grid grid-cols-2 text-black">
               <div className="text-lg p-1 lg:text-xl lg:p-2">Total</div>
               <div className="text-lg border-l-2 p-1 lg:text-xl lg:p-2">
-                $100
+                ${Total}
               </div>
             </div>
           </div>

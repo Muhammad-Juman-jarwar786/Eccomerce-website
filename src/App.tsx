@@ -43,6 +43,7 @@ import Footer from './components/footer/Footer';
 import SingleProduct from './components/singleProduct/SingleProduct';
 import Cart from './pages/Cart';
 import { RouteTransition } from './animation/FlipPage';
+import DebugComponent from './components/debug/DebugComponent';
 // import PracticeApi from './components/productCard/PracticeApi';
 
 function App() {
@@ -108,6 +109,7 @@ function App() {
         />
         {/* <Route path="/practiceapi" element={<PracticeApi />} /> */}
       </Routes>
+      <DebugComponent />
       <Footer />
     </>
   );

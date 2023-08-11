@@ -3,6 +3,8 @@ import increment from '../Slice/CartCounterSlice';
 import incrementByAmount from '../Slice/CartCounterSlice';
 import addToCart from '../Slice/CartProductsSlice';
 import removeFromCart from '../Slice/CartProductsSlice';
+import setSubTotal from '../Slice/CartTotalsSlice';
+import setTotalQuantityCart from '../Slice/CartTotalsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +12,8 @@ export const store = configureStore({
     incrementByAmount,
     addToCart,
     removeFromCart,
+    setSubTotal,
+    setTotalQuantityCart,
   },
 });
 
