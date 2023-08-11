@@ -1,13 +1,14 @@
-import { useState } from "react";
-import FeaturedProductsShop from "./FeaturedProductsShop";
-import NewsLetter from "../newsLetter/NewsLetter";
-import f1 from "../../assets/products/f1.jpg";
-import f2 from "../../assets/products/f2.jpg";
-import f3 from "../../assets/products/f3.jpg";
-import f4 from "../../assets/products/f4.jpg";
-import { Button } from "../buttons/Buttons";
-import { useAppDispatch } from "../../hooks/ReduxToolkitHooks";
-import { incrementByAmount } from "../../Slice/CartCounter";
+import { useState } from 'react';
+import FeaturedProductsShop from './FeaturedProductsShop';
+import NewsLetter from '../newsLetter/NewsLetter';
+import f1 from '../../assets/products/f1.jpg';
+import f2 from '../../assets/products/f2.jpg';
+import f3 from '../../assets/products/f3.jpg';
+import f4 from '../../assets/products/f4.jpg';
+import { Button } from '../buttons/Buttons';
+import { useAppDispatch } from '../../hooks/ReduxToolkitHooks';
+import { incrementByAmount } from '../../Slice/CartCounterSlice';
+// import { addToCart } from '../../Slice/CartProductsSlice';
 
 const SingleProduct = () => {
   const [mainImage, setMainImage] = useState<string | undefined>();
@@ -22,13 +23,13 @@ const SingleProduct = () => {
   const dispatch = useAppDispatch();
 
   const inputChangeHandler = (e: any) => {
-    const val = e.target.value;
+    const val = Number(e.target.value);
     setInputVal(val);
   };
 
   const onAddToCartHandler = () => {
     dispatch(incrementByAmount(inputVal));
-    console.log(inputVal);
+    // dispatch(addToCart())
   };
 
   return (

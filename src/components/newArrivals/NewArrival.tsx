@@ -31,6 +31,7 @@ const NewArrival = () => {
             (products) => (
               <FeaturedProductsCard
                 key={products.id}
+                id={products.id}
                 img={products.img}
                 alt={products.alt}
                 category={products.category}

@@ -1,15 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-import increment from "../Slice/CartCounter";
-import incrementByAmount from "../Slice/CartCounter";
+import { configureStore } from '@reduxjs/toolkit';
+import increment from '../Slice/CartCounterSlice';
+import incrementByAmount from '../Slice/CartCounterSlice';
+import addToCart from '../Slice/CartProductsSlice';
+import removeFromCart from '../Slice/CartProductsSlice';
 
 export const store = configureStore({
   reducer: {
     increment,
     incrementByAmount,
+    addToCart,
+    removeFromCart,
   },
 });
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;

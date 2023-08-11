@@ -1,22 +1,22 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 import {
   faBars,
   faTimes,
   faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import MenuItems from "../menuitems/MenuItems";
-import { NavLink } from "react-router-dom";
-import { MenuData } from "../../data/MenuData";
-import logo from "../../assets/logo.png";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MenuItems from '../menuitems/MenuItems';
+import { NavLink } from 'react-router-dom';
+import { MenuData } from '../../data/MenuData';
+import logo from '../../assets/logo.png';
 import {
   CartIconAnimation,
   NavbarAnimation,
   ShowMobileMenu,
   mobCartIconAnimation,
   mobMenuNavbar,
-} from "../../animation/Navbar";
-import { useAppSelector } from "../../hooks/ReduxToolkitHooks";
+} from '../../animation/Navbar';
+import { useAppSelector } from '../../hooks/ReduxToolkitHooks';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -40,24 +40,18 @@ const Navbar = () => {
     setShowMenu(false);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
-  const AddedCartCount = useAppSelector(
-    (state) => state.incrementByAmount.value
-  );
-
   const CartCount = useAppSelector((state) => state.increment.value);
-
-  const newCartCount = CartCount + AddedCartCount;
 
   const [isHighlighted, setIsHighlighted] = useState(false);
 
@@ -98,7 +92,7 @@ const Navbar = () => {
             ref={mobCartRef}
             onClick={scrollTop}
             className={`md:hidden mt-8 relative cursor-pointer justify-center items-center flex group transition-all duration-100 ${
-              isHighlighted ? "scale-125" : ""
+              isHighlighted ? 'scale-125' : ''
             }`}
           >
             <FontAwesomeIcon
@@ -106,7 +100,7 @@ const Navbar = () => {
               icon={faCartShopping}
             />
             <span className=" group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute left-3 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
-              {newCartCount}
+              {CartCount}
             </span>
           </NavLink>
           <div
@@ -132,7 +126,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div ref={menuRef} className={`mt-20 ${showMenu ? "block" : ""}`}>
+        <div ref={menuRef} className={`mt-20 ${showMenu ? 'block' : ''}`}>
           <ul className="h-full font-bold text-2xl text-center flex flex-col gap-7">
             {MenuData.map((item, i) => (
               <React.Fragment key={i}>
@@ -166,7 +160,7 @@ const Navbar = () => {
               to="/cart"
               ref={cartRef}
               className={`relative cursor-pointer group transition-all duration-100 ${
-                isHighlighted ? "scale-125" : ""
+                isHighlighted ? 'scale-125' : ''
               }`}
               onClick={scrollTop}
             >
@@ -175,7 +169,7 @@ const Navbar = () => {
                 icon={faCartShopping}
               />
               <span className="group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
-                {newCartCount}
+                {CartCount}
               </span>
             </NavLink>
           </ul>

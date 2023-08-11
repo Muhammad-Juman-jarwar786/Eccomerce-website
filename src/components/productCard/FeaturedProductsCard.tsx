@@ -1,19 +1,22 @@
-import { faCartShopping, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/ReduxToolkitHooks";
-import { increment } from "../../Slice/CartCounter";
+import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+import { useAppDispatch } from '../../hooks/ReduxToolkitHooks';
+import { increment } from '../../Slice/CartCounterSlice';
+import { addToCart } from '../../Slice/CartProductsSlice';
 
 const FeaturedProductsCard = (props: any) => {
   const dispatch = useAppDispatch();
 
   const addToCartHandler = () => {
     dispatch(increment());
+    dispatch(addToCart(props));
   };
 
   return (
     <>
       <div
+        id={props.id}
         data-aos={props.animation}
         data-aos-easing="ease-in-back"
         // data-aos-duration="1000"
@@ -33,11 +36,11 @@ const FeaturedProductsCard = (props: any) => {
           </h1>
           <div>
             <div className="text-md sm:text-sm">
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
-              <FontAwesomeIcon icon={faStar} style={{ color: "#ffa200" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: '#ffa200' }} />
             </div>
             <div className="flex justify-between text-2xl sm:text-xl">
               <div className="text-teal-700 font-medium mt-2">

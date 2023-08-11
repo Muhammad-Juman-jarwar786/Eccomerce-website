@@ -1,6 +1,6 @@
-import FeaturedProductsCard from "../productCard/FeaturedProductsCard";
-import { ProductsData } from "../../data/ProductsData";
-import { Button } from "../buttons/Buttons";
+import FeaturedProductsCard from '../productCard/FeaturedProductsCard';
+import { ProductsData } from '../../data/ProductsData';
+import { Button } from '../buttons/Buttons';
 
 const ProductSection = () => {
   return (
@@ -9,6 +9,7 @@ const ProductSection = () => {
         {ProductsData.map((item) => (
           <FeaturedProductsCard
             key={item.id}
+            id={item.id}
             link="/singleproduct"
             img={item.img}
             alt={item.alt}

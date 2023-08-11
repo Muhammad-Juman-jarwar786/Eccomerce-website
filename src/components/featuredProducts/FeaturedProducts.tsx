@@ -1,5 +1,6 @@
 import FeaturedProductsCard from '../productCard/FeaturedProductsCard';
 import { ProductsData } from '../../data/ProductsData';
+// import { useEffect } from 'react';
 
 const FeaturedProducts = () => {
   const productsToShow: number = 8;
@@ -30,6 +31,7 @@ const FeaturedProducts = () => {
           {ProductsData.slice(0, productsToShow).map((product) => (
             <FeaturedProductsCard
               key={product.id}
+              id={product.id}
               img={product.img}
               alt={product.alt}
               category={product.category}
