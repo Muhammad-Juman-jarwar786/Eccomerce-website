@@ -24,7 +24,7 @@ const SingleProduct = () => {
   const productToShow: any = useAppSelector(
     (state) => state.singleProduct.products
   );
-  console.log(productToShow);
+  // console.log(productToShow);
 
   const secondaryImages = [f1, f2, f3, f4];
 

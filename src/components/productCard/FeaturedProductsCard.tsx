@@ -10,6 +10,10 @@ const FeaturedProductsCard = (props: any) => {
 
   const SingleProduct = () => {
     dispatch(singleProduct(props));
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   const addToCartHandler = () => {

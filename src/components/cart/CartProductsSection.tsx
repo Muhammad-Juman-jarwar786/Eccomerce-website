@@ -38,25 +38,6 @@ const CartProductsSection = () => {
 
   const [subTotalVal, setSubTotalVal] = useState(0);
 
-  // const [totalQuantity, setTotalQuantity] = useState(0);
-
-  // useEffect(() => {
-  //   const total: any = uniqueProductsArray.reduce(
-  //     (accumulator, product: any) => {
-  //       return accumulator + product.quantity;
-  //     },
-  //     0
-  //   );
-
-  //   setTotalQuantity(total);
-  //   dispatch(setTotalQuantityCart(totalQuantity));
-  // }, [uniqueProductsArray, totalQuantity]);
-
-  // useEffect(() => {
-  //   // console.log(totalQuantity);
-
-  // }, []);
-
   useEffect(() => {
     const total = cart.reduce((accumulator, product: any) => {
       return accumulator + parseFloat(product.price);
@@ -88,9 +69,9 @@ const CartProductsSection = () => {
             </tr>
           </thead>
           <tbody>
-            {uniqueProductsArray.map((product: any) => (
+            {uniqueProductsArray.map((product: any, index: any) => (
               <CartProduct
-                key={product.id}
+                key={index}
                 id={product.id}
                 img={product.img}
                 title={product.title}
