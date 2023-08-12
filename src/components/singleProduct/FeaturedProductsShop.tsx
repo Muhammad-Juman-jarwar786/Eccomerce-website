@@ -29,6 +29,7 @@ const FeaturedProductsShop = () => {
           {productsToDisplay.map((product) => (
             <FeaturedProductsCard
               key={product.id}
+              id={product.id}
               img={product.img}
               alt={product.alt}
               category={product.category}

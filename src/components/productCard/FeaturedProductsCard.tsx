@@ -2,14 +2,17 @@ import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks/ReduxToolkitHooks';
-import { increment } from '../../Slice/CartCounterSlice';
 import { addToCart } from '../../Slice/CartProductsSlice';
+import { singleProduct } from '../../Slice/SingleProductSlice';
 
 const FeaturedProductsCard = (props: any) => {
   const dispatch = useAppDispatch();
 
+  const SingleProduct = () => {
+    dispatch(singleProduct(props));
+  };
+
   const addToCartHandler = () => {
-    dispatch(increment());
     dispatch(addToCart(props));
   };
 
@@ -19,12 +22,16 @@ const FeaturedProductsCard = (props: any) => {
         id={props.id}
         data-aos={props.animation}
         data-aos-easing="ease-in-back"
-        // data-aos-duration="1000"
         className="bg-white w-full border-2 rounded-3xl mt-9 p-3 shadow-lg group "
       >
         <div className="peer w-full h-auto hover:scale-110 hover:shadow-xl hover:border-spacing-4 hover:border-8 hover:border-white hover:rounded-3xl transition-all duration-700 hover:animate-pulse">
-          <Link to={props?.link}>
-            <img className="rounded-3xl" src={props.img} alt={props.alt} />
+          <Link to={`/singleproduct/${props.id}`}>
+            <img
+              onClick={SingleProduct}
+              className="rounded-3xl"
+              src={props.img}
+              alt={props.alt}
+            />
           </Link>
         </div>
         <div className="peer-hover:opacity-0">

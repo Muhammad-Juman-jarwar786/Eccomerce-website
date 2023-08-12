@@ -10,7 +10,7 @@ const ProductSection = () => {
           <FeaturedProductsCard
             key={item.id}
             id={item.id}
-            link="/singleproduct"
+            // link="/singleproduct"
             img={item.img}
             alt={item.alt}
             category={item.category}

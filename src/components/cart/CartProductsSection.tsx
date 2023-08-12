@@ -2,8 +2,8 @@ import CartProduct from './CartProduct';
 import { useAppDispatch, useAppSelector } from '../../hooks/ReduxToolkitHooks';
 import { removeFromCart } from '../../Slice/CartProductsSlice';
 import { useEffect, useState } from 'react';
-import { setSubTotal, setTotalQuantityCart } from '../../Slice/CartTotalsSlice';
-import { store } from '../../redux/store';
+import { setSubTotal } from '../../Slice/CartTotalsSlice';
+// import { store } from '../../redux/store';
 
 const CartProductsSection = () => {
   const cart = useAppSelector((state) => state.addToCart.products);
@@ -38,23 +38,24 @@ const CartProductsSection = () => {
 
   const [subTotalVal, setSubTotalVal] = useState(0);
 
-  const [totalQuantity, setTotalQuantity] = useState(0);
+  // const [totalQuantity, setTotalQuantity] = useState(0);
 
-  useEffect(() => {
-    const total: any = uniqueProductsArray.reduce(
-      (accumulator, product: any) => {
-        return accumulator + product.quantity;
-      },
-      0
-    );
+  // useEffect(() => {
+  //   const total: any = uniqueProductsArray.reduce(
+  //     (accumulator, product: any) => {
+  //       return accumulator + product.quantity;
+  //     },
+  //     0
+  //   );
 
-    setTotalQuantity(total);
-  }, [uniqueProductsArray]);
+  //   setTotalQuantity(total);
+  //   dispatch(setTotalQuantityCart(totalQuantity));
+  // }, [uniqueProductsArray, totalQuantity]);
 
-  useEffect(() => {
-    // console.log(totalQuantity);
-    store.dispatch(setTotalQuantityCart(totalQuantity));
-  }, [totalQuantity]);
+  // useEffect(() => {
+  //   // console.log(totalQuantity);
+
+  // }, []);
 
   useEffect(() => {
     const total = cart.reduce((accumulator, product: any) => {
@@ -71,8 +72,8 @@ const CartProductsSection = () => {
   return (
     <div className="mt-10">
       {uniqueProductsArray.length === 0 ? (
-        <p className="text-2xl text-center text-black font-bold mt-3">
-          Your cart is empty.
+        <p className="text-2xl text-center text-black font-bold mt-32">
+          Your cart is Currently empty.
         </p>
       ) : (
         <table className="justify-center grid-cols-1 grid gap-5">

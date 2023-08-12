@@ -50,15 +50,11 @@ const Navbar = () => {
       behavior: 'smooth',
     });
   };
-
-  const CartCount = useAppSelector((state) => state.increment.value);
-
-  const CartQuantity = useAppSelector(
-    (state) => state.setTotalQuantityCart.totalQuantity
-  );
-  // console.log(CartQuantity);
-
   const [isHighlighted, setIsHighlighted] = useState(false);
+
+  const products = useAppSelector((state) => state.addToCart.products);
+
+  const totalproducts = products.length;
 
   useEffect(() => {
     setIsHighlighted(true);
@@ -68,7 +64,7 @@ const Navbar = () => {
     }, 100);
 
     return () => clearTimeout(timeoutId);
-  }, [CartCount, CartQuantity]);
+  }, [products]);
 
   return (
     <div className="overflow-hidden">
@@ -105,7 +101,7 @@ const Navbar = () => {
               icon={faCartShopping}
             />
             <span className=" group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute left-3 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
-              {CartQuantity}
+              {totalproducts}
             </span>
           </NavLink>
           <div
@@ -174,7 +170,7 @@ const Navbar = () => {
                 icon={faCartShopping}
               />
               <span className="group-hover:scale-110 hover:group-hover:scale-100 ease-in-out transition-all duration-700 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">
-                {CartQuantity}
+                {totalproducts}
               </span>
             </NavLink>
           </ul>

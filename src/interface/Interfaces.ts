@@ -21,3 +21,17 @@ export interface FeatureCardProps {
 export interface CartCounterState {
   value: number;
 }
+
+export interface Product {
+  id: number;
+  img: string;
+  alt: string;
+  category: string;
+  title: string;
+  price: number;
+  animation: string;
+}
+
+export interface CartState {
+  products: Product[];
+}

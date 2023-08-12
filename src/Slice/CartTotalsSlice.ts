@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   subTotal: 0,
-  totalQuantity: 0,
 };
 
 export const CartTotalsSlice = createSlice({
@@ -12,12 +11,9 @@ export const CartTotalsSlice = createSlice({
     setSubTotal: (state, action) => {
       state.subTotal = action.payload;
     },
-    setTotalQuantityCart: (state, action) => {
-      state.totalQuantity = action.payload;
-    },
   },
 });
 
-export const { setSubTotal, setTotalQuantityCart } = CartTotalsSlice.actions;
+export const { setSubTotal } = CartTotalsSlice.actions;
 
 export default CartTotalsSlice.reducer;

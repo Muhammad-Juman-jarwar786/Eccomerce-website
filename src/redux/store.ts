@@ -1,19 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import increment from '../Slice/CartCounterSlice';
 import incrementByAmount from '../Slice/CartCounterSlice';
 import addToCart from '../Slice/CartProductsSlice';
 import removeFromCart from '../Slice/CartProductsSlice';
 import setSubTotal from '../Slice/CartTotalsSlice';
-import setTotalQuantityCart from '../Slice/CartTotalsSlice';
+import singleProduct from '../Slice/SingleProductSlice';
 
 export const store = configureStore({
   reducer: {
-    increment,
     incrementByAmount,
     addToCart,
     removeFromCart,
     setSubTotal,
-    setTotalQuantityCart,
+    singleProduct,
   },
 });
 

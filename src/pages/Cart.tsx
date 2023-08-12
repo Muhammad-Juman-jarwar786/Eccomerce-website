@@ -6,7 +6,10 @@ const Cart = () => {
   return (
     <>
       <div
-        style={{ fontFamily: 'Roboto Slab', fontWeight: 400 }}
+        style={{
+          fontFamily: 'Roboto Slab',
+          fontWeight: 400,
+        }}
         className="bg-slate-100 w-full h-auto"
       >
         <CartHeroSection />
