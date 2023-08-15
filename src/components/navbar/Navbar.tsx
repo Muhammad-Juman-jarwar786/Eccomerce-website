@@ -70,7 +70,7 @@ const Navbar = () => {
     <div className="overflow-hidden">
       <nav
         ref={logoRef}
-        className="NavBar fixed z-50 overflow-hidden md:flex md:justify-between bg-slate-100 w-full h-auto drop-shadow-xl"
+        className="NavBar fixed z-50 overflow-hidden md:flex md:justify-between bg-slate-100 w-full h-full drop-shadow-xl"
       >
         <div className="flex justify-between">
           <div
@@ -83,7 +83,7 @@ const Navbar = () => {
             className="LOGO w-40"
           >
             <img
-              className="w-40 cursor-pointer hover:translate-x-3 ease-in-out duration-200"
+              className="w-40 h-[10vh] cursor-pointer hover:translate-x-3 ease-in-out duration-200"
               src={logo}
               alt="Logo"
             />
@@ -92,7 +92,7 @@ const Navbar = () => {
             to="/cart"
             ref={mobCartRef}
             onClick={scrollTop}
-            className={`md:hidden mt-8 relative cursor-pointer justify-center items-center flex group transition-all duration-100 ${
+            className={`md:hidden mt-8 relative cursor-pointer justify-center items-start sm:items-center  h-[10vh] flex group transition-all duration-100 ${
               isHighlighted ? 'scale-125' : ''
             }`}
           >
@@ -128,7 +128,7 @@ const Navbar = () => {
           </div>
         </div>
         <div ref={menuRef} className={`mt-20 ${showMenu ? 'block' : ''}`}>
-          <ul className="h-full font-bold text-2xl text-center flex flex-col gap-7">
+          <ul className="h-full font-bold text-2xl text-center flex flex-col sm:gap-7">
             {MenuData.map((item, i) => (
               <React.Fragment key={i}>
                 <MenuItems
@@ -139,7 +139,7 @@ const Navbar = () => {
                   pathname={item.pathname}
                   pathnamestarts={item.pathnamestarts}
                 />
-                <hr className="text-slate-800 border-b-2 border-slate-200 top-[-1.8rem] relative z-0" />
+                <hr className="text-slate-800 border-b-2 border-slate-200 top-[-1.8rem] relative z-0 hidden sm:block" />
               </React.Fragment>
             ))}
           </ul>

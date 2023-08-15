@@ -15,7 +15,7 @@ const SingleProduct = () => {
   const [mainImage, setMainImage] = useState<string | undefined>();
   const [inputVal, setInputVal] = useState(0);
 
-  // const {pid}: any = useParams();
+  // const { pid }: any = useParams();
 
   const handleSecondaryImage = (image: string) => {
     setMainImage(image);
@@ -30,6 +30,11 @@ const SingleProduct = () => {
 
   const dispatch = useAppDispatch();
 
+  // const inputChangeHandler = (e: any) => {
+  //   const val = Number(e.target.value);
+  //   setInputVal(val);
+  // };
+
   const inputChangeHandler = (e: any) => {
     const val = Number(e.target.value);
     setInputVal(val);
@@ -37,7 +42,13 @@ const SingleProduct = () => {
 
   const onAddToCartHandler = () => {
     // dispatch(incrementByAmount(inputVal));
-    dispatch(addToCart(productToShow));
+    const selectedProduct = productToShow; // Assuming productToShow is an object
+    const cartItem: any = {
+      product: selectedProduct,
+      quantity: inputVal,
+    };
+    dispatch(addToCart(cartItem));
+    // dispatch(addToCart(pid));
   };
 
   return (
